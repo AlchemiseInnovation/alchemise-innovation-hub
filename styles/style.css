@@ -1,286 +1,3 @@
-/* RESET & BASE STYLES */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e1c;
-  color: #e0e0e0;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* HEADER */
-header {
-  background-color: #111;
-  padding: 30px 20px;
-  text-align: center;
-  border-bottom: 2px solid #444;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-.brand {
-  color: #ffffff;
-}
-
-.hub-label {
-  color: #cccccc;
-  font-style: italic;
-  margin-left: 10px;
-}
-
-nav {
-  margin-top: 15px;
-}
-
-nav a {
-  color: #9df2ff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #fdf897;
-}
-
-/* HERO SECTION */
-#hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-banner {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 12px;
-  opacity: 1;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-  z-index: 5;
-}
-
-.hero-overlay.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.hero-overlay h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.cta-button {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  margin: 0 auto;
-  background-color: #9df2ff;
-  color: #000;
-  padding: 12px 24px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #fdf897;
-}
-
-/* QUICK ACCESS PANELS */
-#quick-panels {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #1a1a2f;
-}
-
-.panel {
-  width: 260px;
-  min-height: 320px;
-  background-color: #222;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-.panel:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #9df2ff;
-}
-
-.sigil-icon {
-  width: 180px;
-  height: auto;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.panel:hover .sigil-icon {
-  transform: scale(1.1);
-}
-
-.panel h3 {
-  font-size: 1.4rem;
-  color: #fdf897;
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-
-.panel p {
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* CREATE PAGE */
-#create-welcome {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #1b1b2f;
-}
-
-#create-welcome h2 {
-  font-size: 2.2rem;
-  color: #fdf897;
-  margin-bottom: 10px;
-}
-
-#create-welcome p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-#creative-paths {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #141424;
-}
-
-.creative-option {
-  background-color: #222;
-  padding: 30px;
-  border-radius: 16px;
-  width: 500px;
-  max-width: 100%;
-  text-align: center;
-  box-shadow: 0 0 15px #000;
-  transition: transform 0.3s ease;
-}
-
-.creative-option:hover {
-  transform: scale(1.02);
-}
-
-.creative-option h3 {
-  font-size: 1.5rem;
-  color: #9df2ff;
-  margin-bottom: 10px;
-}
-
-.creative-option p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-.creative-option iframe {
-  border-radius: 12px;
-  box-shadow: 0 0 10px #000;
-}
-
-/* SHOP PAGE */
-#shop-intro {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #1a1a2f;
-  color: #ccc;
-}
-
-#shop-intro h2 {
-  font-size: 2.2rem;
-  color: #fdf897;
-}
-
-#faction-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #141424;
-}
-
-.faction-card {
-  background-color: #222;
-  padding: 30px;
-  border-radius: 16px;
-  width: 320px;
-  text-align: center;
-  box-shadow: 0 0 15px #000;
-  transition: transform 0.3s ease;
-}
-
-.faction-card:hover {
-  transform: scale(1.03);
-}
-
-.faction-card img {
-  height: 80px;
-  margin-bottom: 12px;
-  opacity: 0.9;
-}
-
-.faction-card h3 {
-  color: #9df2ff;
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-}
-
-.faction-card p {
-  color: #bbb;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-}
-
-/* EXTERNAL MARKET BUTTONS */
 .market-buttons {
   display: flex;
   flex-direction: column;
@@ -289,52 +6,43 @@ nav a:hover {
   margin-top: 20px;
 }
 
+/* Shared button structure */
+.cta-button {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Main Store */
 .market-main {
   background-color: #9df2ff;
   color: #000;
 }
 
 .market-main:hover {
-  background-color: #fdf897;
+  background-color: #c1f3ff; /* Soft sky blue variant */
 }
 
+/* Bargain Portal */
 .market-bargain {
   background-color: #fdf897;
   color: #000;
 }
 
 .market-bargain:hover {
-  background-color: #9df2ff;
+  background-color: #fff3b0; /* Pale gold variant */
 }
 
-/* PRINTIFY FOOTER CREDIT */
-.printify-credit {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: #777;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.printify-credit a {
-  color: #9df2ff;
-  text-decoration: none;
-}
-
-.printify-credit a:hover {
-  color: #fdf897;
-}
-
-.printify-glyph {
-  height: 20px;
-  width: auto;
-  opacity: 0.75;
-}
-
+/* Etsy Lore Vault */
 .market-etsy {
-  background-color: #ffb6c1; /* Soft elven-pink */
+  background-color: #ffb6c1;
   color: #000;
   box-shadow: 0 0 10px #ffb6c1;
 }
@@ -343,4 +51,3 @@ nav a:hover {
   background-color: #ffe1e9;
   box-shadow: 0 0 15px #ffb6c1;
 }
-
