@@ -105,7 +105,8 @@ nav a:hover {
   max-width: 240px;
   margin: 16px auto 0;
   text-align: center;
-  padding: 12px 24px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
@@ -133,16 +134,16 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 260px;
-  height: 360px;
+  min-height: 360px;
+  height: auto;
   background-color: #222;
   padding: 20px;
   border-radius: 16px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  overflow: hidden;
 }
+
 
 .panel:hover {
   transform: scale(1.05);
@@ -203,12 +204,12 @@ nav a:hover {
 }
 
 .market-buttons {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 10px;
 }
+
 
 .market-main {
   background-color: #9df2ff;
