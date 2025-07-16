@@ -61,20 +61,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-.hero-overlay {
-  opacity: 1;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-  z-index: 5;
-}
-
-.hero-overlay.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-
-
 .hero-banner {
   width: 100%;
   height: auto;
@@ -91,7 +77,15 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 40px;
   border-radius: 12px;
+  opacity: 1;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
   z-index: 5;
+}
+
+.hero-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .hero-overlay h2 {
@@ -104,14 +98,19 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
+/* BUTTONS */
 .cta-button {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
   background-color: #9df2ff;
   color: #000;
   padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
+  text-align: center;
   transition: background-color 0.3s ease;
 }
 
@@ -168,22 +167,7 @@ nav a:hover {
   color: #ccc;
 }
 
-/* CAROUSEL & LORE SECTIONS */
-#carousel,
-#lore-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #141424;
-}
-
-#carousel h2,
-#lore-section h2 {
-  font-size
-
-
-  /* CREATE PAGE STYLES */
-
-/* CREATE PAGE SECTIONS */
+/* CREATE PAGE */
 #create-welcome {
   padding: 40px 20px;
   text-align: center;
@@ -242,53 +226,7 @@ nav a:hover {
   box-shadow: 0 0 10px #000;
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: #9df2ff;
-  color: #000;
-  padding: 12px 24px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #fdf897;
-}
-
-/* PRINTIFY FOOTER CREDIT */
-.printify-credit {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: #777;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.printify-credit a {
-  color: #9df2ff;
-  text-decoration: none;
-}
-
-.printify-credit a:hover {
-  color: #fdf897;
-}
-
-.printify-glyph {
-  height: 20px;
-  width: auto;
-  opacity: 0.75;
-}
-
-  .sigil-icon:hover {
-  box-shadow: 0 0 20px #9df2ff;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-}
-
+/* SHOP PAGE */
 #shop-intro {
   text-align: center;
   padding: 40px 20px;
@@ -342,26 +280,15 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
-
-
+/* EXTERNAL MARKET BUTTONS */
 .market-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
-.market-buttons .cta-button {
-  width: 240px; /* Fixed width for consistency */
-  text-align: center;
-  padding: 12px 24px;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-/* Unique colors for each button */
 .market-main {
   background-color: #9df2ff;
   color: #000;
@@ -380,3 +307,28 @@ nav a:hover {
   background-color: #9df2ff;
 }
 
+/* PRINTIFY FOOTER CREDIT */
+.printify-credit {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.printify-credit a {
+  color: #9df2ff;
+  text-decoration: none;
+}
+
+.printify-credit a:hover {
+  color: #fdf897;
+}
+
+.printify-glyph {
+  height: 20px;
+  width: auto;
+  opacity: 0.75;
+}
