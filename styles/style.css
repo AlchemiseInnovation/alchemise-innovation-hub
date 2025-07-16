@@ -341,3 +341,42 @@ nav a:hover {
   font-size: 0.95rem;
   margin-bottom: 16px;
 }
+
+
+
+
+
+.market-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.market-buttons .cta-button {
+  width: 100%;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Unique colors for each button */
+.market-main {
+  background-color: #9df2ff;
+  color: #000;
+}
+
+.market-main:hover {
+  background-color: #fdf897;
+}
+
+.market-bargain {
+  background-color: #fdf897;
+  color: #000;
+}
+
+.market-bargain:hover {
+  background-color: #9df2ff;
+}
