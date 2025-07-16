@@ -123,14 +123,17 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 260px;
-  height: 560px;
-  background-color: #222;
-   padding: 30px 20px;
-  border-radius: 16px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 520px;
+  padding: 30px 20px;
 }
+
+.button-wrap {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .panel:hover {
   transform: scale(1.05);
