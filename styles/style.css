@@ -61,6 +61,20 @@ nav a:hover {
   overflow: hidden;
 }
 
+.hero-overlay {
+  opacity: 1;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  z-index: 5;
+}
+
+.hero-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+
 .hero-banner {
   width: 100%;
   height: auto;
