@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <!-- rebuild trigger -->
-  
+
   <!-- Header -->
   <header>
     <h1><span class="brand">Alchemise Innovation</span> <span class="hub-label">Hub</span></h1>
@@ -20,66 +19,62 @@
     </nav>
   </header>
 
-<!-- Hero Section -->
-<section id="hero">
-  <img src="assets/images//hero-banner-alchemise-v1.png" alt="Alchemise Innovation Hero Banner" class="hero-banner" />
-  
-  <div class="hero-overlay" id="heroOverlay">
-    <h2>Welcome to the Multiverse</h2>
-    <p>Your gateway to immersive merch and speculative design</p>
-    <a href="#quick-panels" class="cta-button" onclick="fadeOverlay()">Explore the Hub</a>
-  </div>
-</section>
-
-
-<!-- Quick Access Panels -->
-<section id="quick-panels">
-
-  <!-- Shop Collections -->
-  <div class="panel" id="shop">
-    <img src="/assets/images/sigil-shop.png" alt="Shop Sigil" class="sigil-icon" />
-    <h3>Shop Collections</h3>
-    <p>Browse themed merch by realm or faction</p>
-    <div class="button-wrap">
-      <a href="shop.html" class="cta-button market-shop">Enter the Emporium</a>
+  <!-- Hero Section -->
+  <section id="hero">
+    <img src="assets/images/hero-banner-alchemise-v1.png" alt="Alchemise Innovation Hero Banner" class="hero-banner" />
+    <div class="hero-overlay" id="heroOverlay">
+      <h2>Welcome to the Multiverse</h2>
+      <p>Your gateway to immersive merch and speculative design</p>
+      <a href="#quick-panels" class="cta-button" onclick="fadeOverlay()">Explore the Hub</a>
     </div>
-  </div>
+  </section>
 
-  <!-- Create Your Own -->
-  <div class="panel" id="create">
-    <img src="/assets/images/sigil-create.png" alt="Create Sigil" class="sigil-icon" />
-    <h3>Create Your Own</h3>
-    <p>Upload, remix, and alchemise your own gear</p>
-    <div class="button-wrap">
-      <a href="create.html" class="cta-button market-create">Forge Your Design</a>
+  <!-- Quick Access Panels -->
+  <section id="quick-panels">
+
+    <!-- Shop Collections -->
+    <div class="panel" id="shop">
+      <img src="/assets/images/sigil-shop.png" alt="Shop Sigil" class="sigil-icon" />
+      <h3>Shop Collections</h3>
+      <p>Browse themed merch by realm or faction</p>
+      <div class="button-wrap">
+        <a href="shop.html" class="cta-button market-shop">Enter the Emporium</a>
+      </div>
     </div>
-  </div>
 
-  <!-- External Markets (unchanged) -->
-  <div class="panel" id="external">
-    <img src="assets/images/sigil-markets.png" alt="External Markets Sigil" class="sigil-icon" />
-    <h3>External Markets</h3>
-    <p>Visit our outposts across the multiverse</p>
-    <div class="market-buttons">
-      <a href="https://alchemise-innovation.square.site/" class="cta-button market-main" target="_blank">Main Square Store</a>
-      <a href="https://www.tshirtstudio.com/marketplace/alchemise-innovation/" class="cta-button market-bargain" target="_blank">T-Shirt Bargain Portal</a>
-      <a href="https://www.etsy.com/shop/AlchemiseInnovation" class="cta-button market-etsy" target="_blank">Etsy Lore Vault</a>
+    <!-- Create Your Own -->
+    <div class="panel" id="create">
+      <img src="/assets/images/sigil-create.png" alt="Create Sigil" class="sigil-icon" />
+      <h3>Create Your Own</h3>
+      <p>Upload, remix, and alchemise your own gear</p>
+      <div class="button-wrap">
+        <a href="create.html" class="cta-button market-create">Forge Your Design</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Lore & Philosophy -->
-  <div class="panel" id="lore">
-    <img src="/assets/images/sigil-lore.png" alt="Lore Sigil" class="sigil-icon" />
-    <h3>Lore & Philosophy</h3>
-    <p>Discover our design rituals and speculative ethos</p>
-    <div class="button-wrap">
-      <a href="#lore-section" class="cta-button market-create">Explore the Lore</a>
+    <!-- External Markets -->
+    <div class="panel" id="external">
+      <img src="assets/images/sigil-markets.png" alt="External Markets Sigil" class="sigil-icon" />
+      <h3>External Markets</h3>
+      <p>Visit our outposts across the multiverse</p>
+      <div class="market-buttons">
+        <a href="https://alchemise-innovation.square.site/" class="cta-button market-main" target="_blank">Main Square Store</a>
+        <a href="https://www.tshirtstudio.com/marketplace/alchemise-innovation/" class="cta-button market-bargain" target="_blank">T-Shirt Bargain Portal</a>
+        <a href="https://www.etsy.com/shop/AlchemiseInnovation" class="cta-button market-etsy" target="_blank">Etsy Lore Vault</a>
+      </div>
     </div>
-  </div>
 
-</section>
+    <!-- Lore & Philosophy -->
+    <div class="panel" id="lore">
+      <img src="/assets/images/sigil-lore.png" alt="Lore Sigil" class="sigil-icon" />
+      <h3>Lore & Philosophy</h3>
+      <p>Discover our design rituals and speculative ethos</p>
+      <div class="button-wrap">
+        <a href="#lore-section" class="cta-button market-create">Explore the Lore</a>
+      </div>
+    </div>
 
-
+  </section>
 
   <!-- Featured Carousel (Placeholder) -->
   <section id="carousel">
@@ -98,18 +93,13 @@
     <p>&copy; 2025 Alchemise Innovation. Explore responsibly across the multiverse.</p>
   </footer>
 
-<!-- JavaScript -->
-<script>
-  function fadeOverlay() {
-    document.getElementById('heroOverlay').classList.add('fade-out');
-  }
-</script>
+  <!-- JavaScript -->
+  <script>
+    function fadeOverlay() {
+      document.getElementById('heroOverlay').classList.add('fade-out');
+    }
+  </script>
+  <script src="script/create.js"></script>
 
-<script src="script/create.js"></script>
-
-
-
-
-  
 </body>
 </html>
