@@ -289,3 +289,55 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
+#shop-intro {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1a1a2f;
+  color: #ccc;
+}
+
+#shop-intro h2 {
+  font-size: 2.2rem;
+  color: #fdf897;
+}
+
+#faction-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #141424;
+}
+
+.faction-card {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 15px #000;
+  transition: transform 0.3s ease;
+}
+
+.faction-card:hover {
+  transform: scale(1.03);
+}
+
+.faction-card img {
+  height: 80px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.faction-card h3 {
+  color: #9df2ff;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.faction-card p {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
