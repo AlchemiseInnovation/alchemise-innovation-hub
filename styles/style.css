@@ -346,3 +346,29 @@ a.cta-button:focus {
   outline: 2px solid #fdf897;
   outline-offset: 3px;
 }
+
+
+/* Shop Collections Button */
+.market-shop {
+  background-color: #c1f3ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+}
+
+.market-shop:hover {
+  background-color: #9df2ff;
+  box-shadow: 0 0 15px #9df2ff;
+}
+
+/* Create Your Own Button */
+.market-create {
+  background-color: #fff3b0;
+  color: #000;
+  box-shadow: 0 0 10px #fdf897;
+}
+
+.market-create:hover {
+  background-color: #fdf897;
+  box-shadow: 0 0 15px #fdf897;
+}
+
