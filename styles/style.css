@@ -332,3 +332,15 @@ nav a:hover {
   width: auto;
   opacity: 0.75;
 }
+
+.market-etsy {
+  background-color: #ffb6c1; /* Soft elven-pink */
+  color: #000;
+  box-shadow: 0 0 10px #ffb6c1;
+}
+
+.market-etsy:hover {
+  background-color: #ffe1e9;
+  box-shadow: 0 0 15px #ffb6c1;
+}
+
