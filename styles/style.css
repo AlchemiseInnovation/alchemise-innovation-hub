@@ -103,7 +103,7 @@ nav a:hover {
   display: block;
   width: 100%;
   max-width: 240px;
-  margin: 0 auto;
+  margin: 16px auto 0;
   text-align: center;
   padding: 12px 24px;
   font-weight: bold;
@@ -113,19 +113,28 @@ nav a:hover {
   cursor: pointer;
 }
 
+.cta-button:focus {
+  outline: 2px solid #fdf897;
+  outline-offset: 3px;
+}
+
 /* QUICK ACCESS PANELS */
 #quick-panels {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: 40px;
   padding: 60px 20px;
   background-color: #1a1a2f;
 }
 
 .panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 260px;
-  min-height: 320px;
+  height: 340px;
   background-color: #222;
   padding: 20px;
   border-radius: 16px;
@@ -162,7 +171,30 @@ nav a:hover {
   color: #ccc;
 }
 
-/* MARKET BUTTONS */
+/* SHOP & CREATE BUTTONS */
+.market-shop {
+  background-color: #c1f3ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+}
+
+.market-shop:hover {
+  background-color: #9df2ff;
+  box-shadow: 0 0 15px #9df2ff;
+}
+
+.market-create {
+  background-color: #fff3b0;
+  color: #000;
+  box-shadow: 0 0 10px #fdf897;
+}
+
+.market-create:hover {
+  background-color: #fdf897;
+  box-shadow: 0 0 15px #fdf897;
+}
+
+/* EXTERNAL MARKET BUTTONS */
 .market-buttons {
   display: flex;
   flex-direction: column;
@@ -171,7 +203,6 @@ nav a:hover {
   margin-top: 20px;
 }
 
-/* Main Square Store */
 .market-main {
   background-color: #9df2ff;
   color: #000;
@@ -181,7 +212,6 @@ nav a:hover {
   background-color: #c1f3ff;
 }
 
-/* Bargain Portal */
 .market-bargain {
   background-color: #fdf897;
   color: #000;
@@ -191,7 +221,6 @@ nav a:hover {
   background-color: #fff3b0;
 }
 
-/* Etsy Lore Vault */
 .market-etsy {
   background-color: #ffb6c1;
   color: #000;
@@ -334,41 +363,5 @@ nav a:hover {
 
 .printify-credit a:hover {
   color: #fdf897;
-}
-
-.printify-glyph {
-  height: 20px;
-  width: auto;
-  opacity: 0.75;
-}
-
-a.cta-button:focus {
-  outline: 2px solid #fdf897;
-  outline-offset: 3px;
-}
-
-
-/* Shop Collections Button */
-.market-shop {
-  background-color: #c1f3ff;
-  color: #000;
-  box-shadow: 0 0 10px #9df2ff;
-}
-
-.market-shop:hover {
-  background-color: #9df2ff;
-  box-shadow: 0 0 15px #9df2ff;
-}
-
-/* Create Your Own Button */
-.market-create {
-  background-color: #fff3b0;
-  color: #000;
-  box-shadow: 0 0 10px #fdf897;
-}
-
-.market-create:hover {
-  background-color: #fdf897;
-  box-shadow: 0 0 15px #fdf897;
 }
 
