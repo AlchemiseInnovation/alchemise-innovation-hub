@@ -115,7 +115,7 @@ nav a:hover {
   gap: 40px;
   padding: 60px 20px;
   background-color: #1a1a2f;
-  margin-bottom: 60px; /* adds space below the row */
+  margin-bottom: 80px; /* adds space below the row */
 }
 
 .panel {
@@ -124,7 +124,7 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   width: 260px;
-  height: 420px;
+  height: 480px;
   background-color: #222;
    padding: 30px 20px;
   border-radius: 16px;
