@@ -1,0 +1,113 @@
+/* === Base Theme === */
+:root {
+  --color-bg: #0b0f1a;
+  --color-accent: #f9c448;
+  --color-highlight: #7fddff;
+  --color-panel: #1c2333;
+  --font-main: 'Orbitron', sans-serif;
+  --font-secondary: 'Merriweather', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: var(--font-secondary);
+  color: #ffffff;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(to right, #1c2333, #2f3b52);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+header h1 {
+  font-family: var(--font-main);
+  font-size: 2.5rem;
+  color: var(--color-highlight);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px var(--color-accent);
+}
+
+/* === Hero Section === */
+#hero {
+  background-image: url('../assets/images/panoramic-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#hero p {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  color: var(--color-accent);
+}
+
+/* === Quick Panels === */
+#quick-panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--color-panel);
+}
+
+.panel {
+  background-color: #2e364a;
+  padding: 1.5rem;
+  width: 250px;
+  border: 1px solid var(--color-highlight);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.panel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--color-highlight);
+}
+
+/* === Lore Section === */
+#lore {
+  background-color: #141a2e;
+  padding: 3rem 2rem;
+}
+
+#lore h2 {
+  font-family: var(--font-main);
+  color: var(--color-accent);
+}
+
+#lore p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* === Footer === */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #0b0f1a;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--color-panel);
+  color: #777;
+}
