@@ -28,16 +28,6 @@ header h1 {
   letter-spacing: 1px;
 }
 
-.brand {
-  color: #ffffff;
-}
-
-.hub-label {
-  color: #cccccc;
-  font-style: italic;
-  margin-left: 10px;
-}
-
 nav {
   margin-top: 15px;
 }
@@ -77,9 +67,8 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 40px;
   border-radius: 12px;
-  opacity: 1;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
   z-index: 5;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .hero-overlay.fade-out {
@@ -105,8 +94,7 @@ nav a:hover {
   max-width: 240px;
   margin: 16px auto 0;
   text-align: center;
-  padding: 10px 20px;
-  font-size: 0.95rem;
+  padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
@@ -124,7 +112,6 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
   gap: 40px;
   padding: 60px 20px;
   background-color: #1a1a2f;
@@ -134,16 +121,15 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 360px;
-  height: auto;
+  align-items: center;
+  width: 260px;
+  height: 360px;
   background-color: #222;
   padding: 20px;
   border-radius: 16px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
-
 
 .panel:hover {
   transform: scale(1.05);
@@ -153,14 +139,11 @@ nav a:hover {
 .sigil-icon {
   width: 180px;
   height: auto;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
+  margin: 0 auto 15px;
+  display: block;
 }
 
-.panel:hover .sigil-icon {
-  transform: scale(1.1);
-}
-
+/* PANEL TEXT */
 .panel h3 {
   font-size: 1.4rem;
   color: #fdf897;
@@ -196,20 +179,14 @@ nav a:hover {
   box-shadow: 0 0 15px #fdf897;
 }
 
-/* EXTERNAL MARKET SECTION */
-.market-scroll {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding-top: 8px;
-}
-
+/* EXTERNAL MARKETS BUTTONS */
 .market-buttons {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
 }
-
 
 .market-main {
   background-color: #9df2ff;
@@ -238,152 +215,4 @@ nav a:hover {
 .market-etsy:hover {
   background-color: #ffe1e9;
   box-shadow: 0 0 15px #ffb6c1;
-}
-
-/* SHOP PAGE STYLES */
-#shop-intro {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #1a1a2f;
-  color: #ccc;
-}
-
-#shop-intro h2 {
-  font-size: 2.2rem;
-  color: #fdf897;
-}
-
-#faction-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #141424;
-}
-
-.faction-card {
-  background-color: #222;
-  padding: 30px;
-  border-radius: 16px;
-  width: 320px;
-  text-align: center;
-  box-shadow: 0 0 15px #000;
-  transition: transform 0.3s ease;
-}
-
-.faction-card:hover {
-  transform: scale(1.03);
-}
-
-.faction-card img {
-  height: 80px;
-  margin-bottom: 12px;
-  opacity: 0.9;
-}
-
-.faction-card h3 {
-  color: #9df2ff;
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-}
-
-.faction-card p {
-  color: #bbb;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-}
-
-/* CREATE PAGE STYLES */
-#create-welcome {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #1b1b2f;
-}
-
-#create-welcome h2 {
-  font-size: 2.2rem;
-  color: #fdf897;
-  margin-bottom: 10px;
-}
-
-#create-welcome p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-#creative-paths {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #141424;
-}
-
-.creative-option {
-  background-color: #222;
-  padding: 30px;
-  border-radius: 16px;
-  width: 500px;
-  max-width: 100%;
-  text-align: center;
-  box-shadow: 0 0 15px #000;
-  transition: transform 0.3s ease;
-}
-
-.creative-option:hover {
-  transform: scale(1.02);
-}
-
-.creative-option h3 {
-  font-size: 1.5rem;
-  color: #9df2ff;
-  margin-bottom: 10px;
-}
-
-.creative-option p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-.creative-option iframe {
-  border-radius: 12px;
-  box-shadow: 0 0 10px #000;
-}
-
-/* FOOTER & UTILITY */
-footer {
-  background-color: #111;
-  padding: 30px 20px;
-  text-align: center;
-  color: #777;
-  border-top: 2px solid #444;
-  font-size: 0.9rem;
-}
-
-.printify-credit {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: #777;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.printify-credit a {
-  color: #9df2ff;
-  text-decoration: none;
-}
-
-.printify-credit a:hover {
-  color: #fdf897;
-}
-
-.printify-glyph {
-  height: 20px;
-  width: auto;
-  opacity: 0.75;
 }
