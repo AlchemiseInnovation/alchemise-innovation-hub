@@ -134,13 +134,14 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   width: 260px;
-  height: 340px;
+  height: 360px;
   background-color: #222;
   padding: 20px;
   border-radius: 16px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
 
 .panel:hover {
@@ -194,13 +195,19 @@ nav a:hover {
   box-shadow: 0 0 15px #fdf897;
 }
 
-/* EXTERNAL MARKET BUTTONS */
+/* EXTERNAL MARKET SECTION */
+.market-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 8px;
+}
+
 .market-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .market-main {
@@ -346,6 +353,15 @@ nav a:hover {
 }
 
 /* FOOTER & UTILITY */
+footer {
+  background-color: #111;
+  padding: 30px 20px;
+  text-align: center;
+  color: #777;
+  border-top: 2px solid #444;
+  font-size: 0.9rem;
+}
+
 .printify-credit {
   margin-top: 10px;
   font-size: 0.85rem;
@@ -365,3 +381,8 @@ nav a:hover {
   color: #fdf897;
 }
 
+.printify-glyph {
+  height: 20px;
+  width: auto;
+  opacity: 0.75;
+}
