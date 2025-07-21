@@ -5,7 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop Collections | Alchemise Innovation</title>
   <link rel="stylesheet" href="styles/style.css" />
+
+  <style>
+    .collection-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    .collection-tile {
+      text-align: center;
+      max-width: 320px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .collection-tile:hover {
+      transform: scale(1.03);
+    }
+
+    .collection-tile img {
+      width: 300px;
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .collection-tile img:hover {
+      filter: brightness(1.1) drop-shadow(0 0 6px #e0e0ff);
+      transform: scale(1.05);
+    }
+
+    .collection-tile h2 {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .collection-tile:hover h2 {
+      color: #ffe486;
+      text-shadow: 0 0 4px #7766ff;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .collection-tile a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .collection-tile a:hover {
+      background: #7766ff;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1><span class="brand">Alchemise Innovation</span> <span class="hub-label">Collections</span></h1>
@@ -14,114 +76,83 @@
     </nav>
   </header>
 
+  <section id="emporium">
+    <h1>🧭 Welcome to the Emporium</h1>
+    <p>Choose your archive below to explore our themed apparel collections. Each one is steeped in lore, but clearly labeled for easy discovery.</p>
 
-<section id="emporium">
-  <h1>🧭 Welcome to the Emporium</h1>
-  <p>Choose your archive below to explore our themed apparel collections. Each one is steeped in lore, but clearly labeled for easy discovery.</p>
+    <div class="collection-grid">
 
-  <div class="collection-grid">
+      <!-- Collection Tiles -->
+      <div class="collection-tile">
+        <img src="assets/images/emporium/Lunar_Transmissions.png" alt="Visual thumbnail of Lunar Transmissions collection featuring harmonic moon glyphs">
+        <h2>Lunar Transmissions</h2>
+        <p class="subtitle">Glow-in-the-dark tees, harmonic glyphs, and moon-inspired visuals.</p>
+        <a href="INSERT_LUNAR_LINK">Enter Collection</a>
+      </div>
 
-    <!-- Collection Tile -->
-    <div class="collection-tile">
-      <img src="assets/images/emporium/Lunar_Transmissions.png" alt="Lunar Transmissions thumbnail">
-      <h2>Lunar Transmissions</h2>
-      <p class="subtitle">Glow-in-the-dark tees, harmonic glyphs, and moon-inspired visuals.</p>
-      <a href="INSERT_LUNAR_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/wardenary_league.png" alt="Wardenry League crest with fantasy football motifs">
+        <h2>Wardenry League Chronicles</h2>
+        <p class="subtitle">Fantasy football kits fused with interactive match lore.</p>
+        <a href="INSERT_WARDENRY_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/wardenary_league.png" alt="Fantasy Football League thumbnail">
-      <h2>Wardenry League Chronicles</h2>
-      <p class="subtitle">Fantasy football kits fused with interactive match lore.</p>
-      <a href="INSERT_WARDENRY_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/Echo_League.png" alt="Echo League tile featuring glitch overlays and race-sport emblems">
+        <h2>Echo League Archives</h2>
+        <p class="subtitle">F1 and football designs with our signature twist and aesthetic overlays.</p>
+        <a href="INSERT_SPORT_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/Echo_League.png" alt="Echo League thumbnail">
-      <h2>Echo League Archives</h2>
-      <p class="subtitle">F1 and football designs with our signature twist and aesthetic overlays.</p>
-      <a href="INSERT_SPORT_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/cosmic_fringe.png" alt="Cosmic Fringe thumbnail with stellar ships and astral trails">
+        <h2>Cosmic Fringe</h2>
+        <p class="subtitle">Sci-fi themed tees including stellar ships and speculative tech.</p>
+        <a href="INSERT_SCIFI_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/cosmic_fringe.png" alt="Cosmic Relics thumbnail">
-      <h2>Cosmic Fringe</h2>
-      <p class="subtitle">Sci-fi themed tees including stellar ships and speculative tech.</p>
-      <a href="INSERT_SCIFI_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/sigil_studies.png" alt="Sigil Studies Lab glyph with reactive ink patterns">
+        <h2>Sigil Studies Lab</h2>
+        <p class="subtitle">Interactive glyphwear—sound-reactive, modular, and mythic.</p>
+        <a href="INSERT_SIGIL_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/sigil_studies.png" alt="Sigil Studies Lab thumbnail">
-      <h2>Sigil Studies Lab</h2>
-      <p class="subtitle">Interactive glyphwear—sound-reactive, modular, and mythic.</p>
-      <a href="INSERT_SIGIL_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/archive_of_the_void.png" alt="Archive of the Void thumbnail with conspiracy-inspired glyphs and distortion">
+        <h2>Archive of the Void</h2>
+        <p class="subtitle">Conspiracy-inspired visuals—UFOs, moon lore, and redacted drops.</p>
+        <a href="INSERT_VOID_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/archive_of_the_void.png" alt="Archive of the Void thumbnail">
-      <h2>Archive of the Void</h2>
-      <p class="subtitle">Conspiracy-inspired visuals—UFOs, moon lore, and redacted drops.</p>
-      <a href="INSERT_VOID_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/design_alchemy.png" alt="Design Alchemy glyph fused with kinetic test patterns">
+        <h2>Design Alchemy</h2>
+        <p class="subtitle">Experimental concepts with reactive ink, AR triggers, and more.</p>
+        <a href="INSERT_INNOVATION_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/design_alchemy.png" alt="Innovation Lab thumbnail">
-      <h2>Design Alchemy</h2>
-      <p class="subtitle">Experimental concepts with reactive ink, AR triggers, and more.</p>
-      <a href="INSERT_INNOVATION_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/forgotten_runes.png" alt="Forgotten Runes Vault image with moss-carved sigils and scroll textures">
+        <h2>Forgotten Runes Vault</h2>
+        <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and fantasy relics.</p>
+        <a href="INSERT_MIDDLE_EARTH_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/forgotten_runes.png" alt="Forgotten Runes thumbnail">
-      <h2>Forgotten Runes Vault</h2>
-      <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and fantasy relics.</p>
-      <a href="INSERT_MIDDLE_EARTH_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/chrono_archive.png" alt="Chrono Archive thumbnail with cracked timepieces and lunar event glyphs">
+        <h2>Chrono Archive</h2>
+        <p class="subtitle">Tees that mark real-world events with a mythic or geek culture twist.</p>
+        <a href="INSERT_EVENTS_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/chrono_archive.png" alt="Chrono Archive thumbnail">
-      <h2>Chrono Archive</h2>
-      <p class="subtitle">Tees that mark real-world events with a mythic or geek culture twist.</p>
-      <a href="INSERT_EVENTS_LINK">Enter Collection</a>
-    </div>
+      <div class="collection-tile">
+        <img src="assets/images/emporium/underlayer_market.png" alt="Underlayer Market visual with stitched discount glyph and magical chest icon">
+        <h2>The Underlayer Market</h2>
+        <p class="subtitle">Customizable tees, personal drops, and magical markdowns.</p>
+        <a href="INSERT_BARGAINS_LINK">Enter Collection</a>
+      </div>
 
-    <div class="collection-tile">
-      <img src="assets/images/emporium/underlayer_market.png" alt="Underlayer Market thumbnail">
-      <h2>The Underlayer Market</h2>
-      <p class="subtitle">Customizable tees, personal drops, and magical markdowns.</p>
-      <a href="INSERT_BARGAINS_LINK">Enter Collection</a>
-    </div>
-
-  </div>
-</section>
-
-
-  
-  <section id="shop-intro">
-    <h2>🛒 Browse the Realms</h2>
-    <p>Each collection echoes a faction, a story, or a myth. Choose wisely.</p>
-  </section>
-
-  <section id="faction-grid">
-    <div class="faction-card">
-      <img src="assets/images/faction-delta.png" alt="Faction Delta Sigil" />
-      <h3>Delta Rise</h3>
-      <p>Solar glyphs, techwear mysticism</p>
-      <a href="https://alchemiseinnovation.printify.me/products/delta-rise" class="cta-button" target="_blank">View Designs</a>
-    </div>
-
-    <div class="faction-card">
-      <img src="assets/images/faction-eclipse.png" alt="Red Eclipse Sigil" />
-      <h3>Red Eclipse</h3>
-      <p>Runic garments from the eclipse wars</p>
-      <a href="https://alchemiseinnovation.printify.me/products/red-eclipse" class="cta-button" target="_blank">Explore Series</a>
-    </div>
-
-    <div class="faction-card">
-      <img src="assets/images/faction-lostruins.png" alt="Lost Ruins Sigil" />
-      <h3>Lost Ruins</h3>
-      <p>Ancient symbols recovered from mythic zones</p>
-      <a href="https://alchemiseinnovation.printify.me/products/lost-ruins" class="cta-button" target="_blank">Unlock Designs</a>
     </div>
   </section>
 
