@@ -70,6 +70,18 @@
       margin-top: 0.5rem;
     }
 
+    .countdown {
+      font-size: 1.2rem;
+      color: #9df2ff;
+      margin-top: 1rem;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .drop-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -77,7 +89,6 @@
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
-      animation: fadeIn 1s ease;
     }
 
     .drop-tile {
@@ -135,11 +146,6 @@
       background-color: #9df2ff;
       color: #000;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
   </style>
 </head>
 
@@ -155,39 +161,36 @@
 
   <section class="portal-hero">
     <img src="assets/portal.gif" alt="Glyph Rift Breach" />
-    <h2 class="drop-title">Rift Fragment Detected</h2>
-    <p class="drop-subtitle">New transmissions bleeding through the vault grid...</p>
+    <h2 class="drop-title">Current Transmission: Moon Day Fragment</h2>
+    <p class="drop-subtitle">This artifact pulses brighter than most. It will remain in spotlight for 6 more days.</p>
+    <div class="countdown" id="countdown">Next breach in: calculating...</div>
   </section>
+
   <section class="drop-grid">
 
     <div class="drop-tile">
-      <img src="assets/images/newdrop_01.png" alt="Design 1" />
-      <h3>Transmission 001-A</h3>
-      <p class="glyph-thread">Stitched during the Mare Lumen Pulse • Artifact logged under Vault IX</p>
-      <a href="shop.html#vault-001a">Unseal Vault</a>
+      <img src="assets/images/moonday_drop.png" alt="Moon Day Drop" />
+      <h3>Transmission 002-M</h3>
+      <p class="glyph-thread">Decoded during Moon Phase IX • Harmonic glyph stitched in lunar drift</p>
+      <a href="shop.html#vault-002m">Unseal Vault</a>
     </div>
 
-    <div class="drop-tile">
-      <img src="assets/images/newdrop_02.png" alt="Design 2" />
-      <h3>Transmission 001-B</h3>
-      <p class="glyph-thread">Interference traced to Echo Layer • Glyph fusion confirmed in playback logs</p>
-      <a href="shop.html#vault-001b">Unseal Vault</a>
-    </div>
+  </section>
 
-    <div class="drop-tile">
-      <img src="assets/images/newdrop_03.png" alt="Design 3" />
-      <h3>Transmission 001-C</h3>
-      <p class="glyph-thread">Codex stitch detected in harmonic drift • Frequency match: Sigil 7766</p>
-      <a href="shop.html#vault-001c">Unseal Vault</a>
-    </div>
-
-    <div class="drop-tile">
-      <img src="assets/images/newdrop_04.png" alt="Design 4" />
-      <h3>Transmission 001-D</h3>
-      <p class="glyph-thread">Trace glyph spotted during moonfold flare • Ambient distortion archived</p>
-      <a href="shop.html#vault-001d">Unseal Vault</a>
-    </div>
-
+  <section style="text-align:center; margin:3rem auto;">
+    <p style="color:#ccc; font-size:1rem;">
+      Looking for past transmissions? Explore the full archive below.
+    </p>
+    <a href="shop.html#archive" style="
+      display:inline-block;
+      margin-top:0.5rem;
+      padding:0.6rem 1.2rem;
+      background-color:#444;
+      color:#9df2ff;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+    ">View Archived Drops</a>
   </section>
   <footer>
     <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
@@ -201,8 +204,46 @@
   </footer>
 
   <script>
-    // Reserved for future portal upgrades — ambient effects, timed animations, dynamic glyph shimmer
-    console.log("Portal breach loaded. Transmission tiles active.");
+    // Countdown Logic — resets weekly unless overridden
+    const countdownElement = document.getElementById("countdown");
+
+    // Override for special event — example: Moon Day
+    const isMoonDay = true; // set to false for regular weekly rotation
+
+    // Next drop date (Sunday at midnight or specific lore event)
+    const nextDrop = isMoonDay 
+      ? new Date("2025-07-27T00:00:00") // Moon Day override
+      : new Date(); // Default: next Sunday midnight
+
+    if (!isMoonDay) {
+      const today = new Date();
+      const day = today.getDay();
+      const daysUntilSunday = (7 - day) % 7;
+      nextDrop.setDate(today.getDate() + daysUntilSunday);
+      nextDrop.setHours(0, 0, 0, 0);
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = nextDrop - now;
+
+      if (diff <= 0) {
+        countdownElement.textContent = "A new breach is upon us...";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownElement.textContent =
+        `Next breach in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
+
+  
