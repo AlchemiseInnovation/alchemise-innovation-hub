@@ -268,9 +268,9 @@ footer {
 .emporium-banner img {
   width: 100%;
   height: auto;
-  max-height: 400px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
 }
+
 
