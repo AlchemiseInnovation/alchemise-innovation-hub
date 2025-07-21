@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Alchemise Innovation</title>
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffe486;
+    }
+
+    nav a {
+      color: #9df2ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toggle-buttons {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .toggle-buttons button {
+      background-color: #7766ff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-buttons button:hover {
+      background-color: #9df2ff;
+      color: #000;
+    }
+
+    .about-layer {
+      display: none;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      transition: opacity 0.5s ease;
+    }
+
+    .about-layer.visible {
+      display: block;
+    }
+
+    .layer-title {
+      font-size: 1.5rem;
+      color: #ffe486;
+      margin-bottom: 1rem;
+    }
+
+    .layer-text {
+      font-size: 1.05rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      background-color: #111;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Alchemise Innovation</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="lore.html">Lore</a>
+    </nav>
+  </header>
+
+  <div class="toggle-buttons">
+    <button onclick="switchLayer('layer-myth')">✨ Mythos Layer</button>
+    <button onclick="switchLayer('layer-real')">🛠 Real Layer</button>
+  </div>
+  <div id="layer-myth" class="about-layer visible">
+    <div class="layer-title">✨ Scroll of Origin</div>
+    <div class="layer-text">
+      In the Cycle of Dust and Light, a glyph stitched itself into the wind. That glyph became a scroll. The scroll became an idea.  
+      <br><br>
+      Known as Alchemise Node I, the archive activated during an unexpected signal cascade — part craftwork, part consciousness. Scroll fragments deciphered from Vault IX speak of a maker weaving transmission threads into wearable artifacts.  
+      <br><br>
+      We do not merely design. We evoke. Every sigil, every stitched phrase, every pulse-reactive fragment — it whispers of origins too fractured to decode in full. Yet the lore lives.
+    </div>
+  </div>
+
+  <div id="layer-real" class="about-layer">
+    <div class="layer-title">🛠 Who We Are</div>
+    <div class="layer-text">
+      Alchemise Innovation is a creative brand rooted in storytelling, design modularity, and immersive product experiences. Founded by a team of visionary technologists and artists, we specialize in apparel and interactive media that merge aesthetics with narrative depth.  
+      <br><br>
+      Our mission is to make creative storytelling tangible — whether through sound-reactive prints, thematic maps, or lore-driven simulators. We're committed to accessibility, imagination, and blending technical precision with artistic identity.  
+      <br><br>
+      Alchemise empowers creators and collectors alike to explore designs that resonate emotionally, visually, and thematically.
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Alchemise Innovation. Scrolls stitched with myth and method.</p>
+  </footer>
+
+  <script>
+    function switchLayer(layerId) {
+      const layers = document.querySelectorAll('.about-layer');
+      layers.forEach(layer => layer.classList.remove('visible'));
+      document.getElementById(layerId).classList.add('visible');
+    }
+  </script>
+</body>
+</html>
+
+  
