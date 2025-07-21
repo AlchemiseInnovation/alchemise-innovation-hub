@@ -273,12 +273,14 @@ footer {
   overflow: hidden;
 }
 
+
+
 .emporium-banner img {
-  width: auto;
-  max-width: 100%;
-  max-height: none;
+  width: auto;              /* allows full horizontal scaling */
+  height: auto;             /* lets image grow naturally */
+  max-width: 100%;          /* prevents overflow on wide screens */
+  max-height: none;         /* removes cropping */
   display: block;
 }
-
 
 
