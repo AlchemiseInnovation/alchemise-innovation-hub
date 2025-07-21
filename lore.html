@@ -138,6 +138,39 @@
       color: #ccc;
       font-size: 0.95rem;
     }
+
+@keyframes scrollFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-layer.visible {
+  display: block;
+  animation: scrollFade 0.7s ease forwards;
+}
+
+.layer-title::after {
+  content: " ✦";
+  color: #7766ff;
+  animation: glowPulse 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 4px #7766ff;
+  }
+  to {
+    text-shadow: 0 0 10px #ffe486;
+  }
+}
+
+    
   </style>
 </head>
 
@@ -231,7 +264,17 @@
     <p>&copy; 2025 Alchemise Innovation. All glyphs registered with story threads.</p>
   </footer>
 
-  <script>
+<script>
+  function switchLayer(layerId) {
+    const layers = document.querySelectorAll('.about-layer');
+    layers.forEach(layer => {
+      layer.classList.remove('visible');
+    });
+
+    const activeLayer = document.getElementById(layerId);
+    activeLayer.classList.add('visible');
+  }
+
     // Reserved for interactive glyph effects or lore unlock triggers
     console.log("Lore page loaded. Glyph systems standing by.");
   </script>
