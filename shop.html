@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,214 +208,123 @@
 
 
 
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop Collections | Alchemise Innovation</title>
-  <link rel="stylesheet" href="styles/style.css" />
+<body>
+  <section id="emporium">
+    <h1>🧭 Welcome to the Emporium</h1>
+    <p>Choose your archive below to explore our themed apparel collections. Each one is steeped in lore, but clearly labeled for easy discovery.</p>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <div class="collection-grid">
+      <div class="collection-tile">
+        <img src="assets/images/emporium/Lunar_Transmissions.png" alt="Lunar Transmissions collection featuring moon glyphs and glow elements">
+        <h2>Lunar Transmissions</h2>
+        <p class="subtitle">Glow-in-the-dark tees, harmonic glyphs, and moon-inspired visuals.</p>
+        <a href="INSERT_LUNAR_LINK">Enter Collection</a>
+      </div>
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #fff;
-      line-height: 1.6;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/wardenary_league.png" alt="Wardenry League fantasy football crests">
+        <h2>Wardenry League Chronicles</h2>
+        <p class="subtitle">Fantasy football kits fused with interactive match lore.</p>
+        <a href="INSERT_WARDENRY_LINK">Enter Collection</a>
+      </div>
 
-    header {
-      background-color: #111;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 2px solid #444;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/Echo_League.png" alt="Echo League visual with glitch overlays and sport motifs">
+        <h2>Echo League Archives</h2>
+        <p class="subtitle">F1 and football designs with our signature twist and aesthetic overlays.</p>
+        <a href="INSERT_SPORT_LINK">Enter Collection</a>
+      </div>
 
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 1px;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/cosmic_fringe.png" alt="Cosmic Fringe showcasing stellar ships and astral tech">
+        <h2>Cosmic Fringe</h2>
+        <p class="subtitle">Sci-fi themed tees including stellar ships and speculative tech.</p>
+        <a href="INSERT_SCIFI_LINK">Enter Collection</a>
+      </div>
 
-    .brand {
-      color: #ffffff;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/sigil_studies.png" alt="Sigil Studies Lab with modular glyphs and reactive patterns">
+        <h2>Sigil Studies Lab</h2>
+        <p class="subtitle">Interactive glyphwear—sound-reactive, modular, and mythic.</p>
+        <a href="INSERT_SIGIL_LINK">Enter Collection</a>
+      </div>
 
-    .hub-label {
-      color: #cccccc;
-      font-style: italic;
-      margin-left: 10px;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/archive_of_the_void.png" alt="Archive of the Void glyphs surrounded by cosmic distortion">
+        <h2>Archive of the Void</h2>
+        <p class="subtitle">Conspiracy-inspired visuals—UFOs, moon lore, and redacted drops.</p>
+        <a href="INSERT_VOID_LINK">Enter Collection</a>
+      </div>
 
-    nav {
-      margin-top: 15px;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/design_alchemy.png" alt="Design Alchemy lab visuals with kinetic symbols">
+        <h2>Design Alchemy</h2>
+        <p class="subtitle">Experimental concepts with reactive ink, AR triggers, and more.</p>
+        <a href="INSERT_INNOVATION_LINK">Enter Collection</a>
+      </div>
 
-    nav a {
-      color: #9df2ff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/forgotten_runes.png" alt="Forgotten Runes vault covered in mossy scrolls">
+        <h2>Forgotten Runes Vault</h2>
+        <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and fantasy relics.</p>
+        <a href="INSERT_MIDDLE_EARTH_LINK">Enter Collection</a>
+      </div>
 
-    nav a:hover {
-      color: #fdf897;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/chrono_archive.png" alt="Chrono Archive cracked timepieces and date-based sigils">
+        <h2>Chrono Archive</h2>
+        <p class="subtitle">Tees that mark real-world events with a mythic or geek culture twist.</p>
+        <a href="INSERT_EVENTS_LINK">Enter Collection</a>
+      </div>
 
-    .emporium-banner {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      background-color: #0e0e1c;
-      margin-bottom: 2rem;
-    }
+      <div class="collection-tile">
+        <img src="assets/images/emporium/underlayer_market.png" alt="Underlayer Market stitched glyph and magical discount chest">
+        <h2>The Underlayer Market</h2>
+        <p class="subtitle">Customizable tees, personal drops, and magical markdowns.</p>
+        <a href="INSERT_BARGAINS_LINK">Enter Collection</a>
+      </div>
+    </div> <!-- end collection-grid -->
 
-    .emporium-banner img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-bottom: 1px solid #333;
-    }
+    <!-- 🔮 Lore Reveal Blocks -->
 
-    #emporium {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-lunar')">📖 Reveal Lunar Lore</button>
+      <div id="lore-lunar" class="lore-hidden">
+        <p>Interception site: Mare Imbrium. Glyphs vibrate at lunar resonance frequencies tied to Apollo blackbox anomalies.</p>
+      </div>
+    </div>
 
-    .collection-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-wardenry')">📖 Reveal Wardenry Lore</button>
+      <div id="lore-wardenry" class="lore-hidden">
+        <p>Founded after the Clash of Nine Realms. Kits carry crest sigils tied to ancient match scrolls and war-tactic overlays.</p>
+      </div>
+    </div>
 
-    .collection-tile {
-      background-color: #222;
-      border-radius: 8px;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 320px;
-      min-height: 480px;
-      box-shadow: 0 0 10px #000;
-      transition: transform 0.3s ease-in-out;
-    }
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-echo')">📖 Reveal Echo Lore</button>
+      <div id="lore-echo" class="lore-hidden">
+        <p>Echo clusters mirror glitch bursts recorded during sportcast collapses over three continents. Source: Codec Sigma.</p>
+      </div>
+    </div>
 
-    .collection-tile:hover {
-      transform: scale(1.03);
-    }
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-cosmic')">📖 Reveal Cosmic Lore</button>
+      <div id="lore-cosmic" class="lore-hidden">
+        <p>Navigation sigils recovered from wrecked stellar freighter. Their geometry maps known astral fractures between jump routes.</p>
+      </div>
+    </div>
 
-    .collection-tile img {
-      width: 300px;
-      border-radius: 4px;
-      transition: filter 0.3s ease, transform 0.3s ease;
-    }
-
-    .collection-tile img:hover {
-      filter: brightness(1.1) drop-shadow(0 0 6px #ffe486);
-      transform: scale(1.05);
-    }
-
-    .collection-tile h2 {
-      margin-top: 0.75rem;
-      font-size: 1.5rem;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-      text-align: center;
-    }
-
-    .collection-tile:hover h2 {
-      color: #ffe486;
-      text-shadow: 0 0 4px #7766ff;
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: #ccc;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .collection-tile a {
-      margin-top: auto;
-      padding: 0.5rem 1rem;
-      background: #444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    .collection-tile a:hover {
-      background: #7766ff;
-    }
-
-    .lore-toggle {
-      margin: 2rem auto;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    .lore-toggle button {
-      background-color: #7766ff;
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      box-shadow: 0 0 10px #7766ff;
-    }
-
-    .lore-toggle button:hover {
-      background-color: #9df2ff;
-      color: #000;
-      box-shadow: 0 0 12px #9df2ff;
-    }
-
-    .lore-hidden {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: opacity 0.5s ease, max-height 0.5s ease;
-    }
-
-    .lore-visible {
-      opacity: 1;
-      max-height: 500px;
-      margin-top: 1rem;
-      background-color: #222;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: inset 0 0 12px #7766ff;
-      color: #ccc;
-      line-height: 1.5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #888;
-      background-color: #111;
-      border-top: 1px solid #333;
-    }
-  </style>
-</head>
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-sigil')">📖 Reveal Sigil Lore</button>
+      <div id="lore-sigil" class="lore-hidden">
+        <p>Runes pulse in response to acoustic input. Glyph chain matches sonic archives unearthed in Harmonic Stone lab X-37.</p>
+      </div>
+    </div>
 
 
-      <div class="lore-toggle">
+
+<div class="lore-toggle">
       <button onclick="toggleLore('lore-void')">📖 Reveal Void Lore</button>
       <div id="lore-void" class="lore-hidden">
         <p>Intercepted during an orbital signal breach in 1985. Sigil arrays map blackout zones across multiple moon sectors.</p>
