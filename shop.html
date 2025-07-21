@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,10 +95,9 @@
       padding: 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       max-width: 320px;
-      min-height: 480px;
+      min-height: 580px;
       box-shadow: 0 0 10px #000;
       transition: transform 0.3s ease-in-out;
     }
@@ -139,7 +137,7 @@
     }
 
     .collection-tile a {
-      margin-top: auto;
+      margin-top: 1rem;
       padding: 0.5rem 1rem;
       background: #444;
       color: #fff;
@@ -153,21 +151,21 @@
     }
 
     .lore-toggle {
-      margin: 2rem auto;
-      max-width: 600px;
+      margin-top: 1rem;
       text-align: center;
+      width: 100%;
     }
 
     .lore-toggle button {
       background-color: #7766ff;
       color: #fff;
-      padding: 0.6rem 1.2rem;
+      padding: 0.5rem 1rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s ease;
-      box-shadow: 0 0 10px #7766ff;
+      box-shadow: 0 0 8px #7766ff;
     }
 
     .lore-toggle button:hover {
@@ -185,14 +183,15 @@
 
     .lore-visible {
       opacity: 1;
-      max-height: 500px;
-      margin-top: 1rem;
+      max-height: 200px;
+      margin-top: 0.5rem;
       background-color: #222;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: inset 0 0 12px #7766ff;
+      padding: 0.8rem;
+      border-radius: 6px;
+      box-shadow: inset 0 0 8px #7766ff;
       color: #ccc;
-      line-height: 1.5;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     footer {
@@ -204,160 +203,153 @@
     }
   </style>
 </head>
-
-
-
-
 <body>
   <section id="emporium">
     <h1>🧭 Welcome to the Emporium</h1>
     <p>Choose your archive below to explore our themed apparel collections. Each one is steeped in lore, but clearly labeled for easy discovery.</p>
 
     <div class="collection-grid">
+
+      <!-- LUNAR TRANSMISSIONS -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/Lunar_Transmissions.png" alt="Lunar Transmissions collection featuring moon glyphs and glow elements">
+        <img src="assets/images/emporium/Lunar_Transmissions.png" alt="Moon glyphs and glow elements">
         <h2>Lunar Transmissions</h2>
         <p class="subtitle">Glow-in-the-dark tees, harmonic glyphs, and moon-inspired visuals.</p>
         <a href="INSERT_LUNAR_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-lunar')">📖 Reveal Lunar Lore</button>
+          <div id="lore-lunar" class="lore-hidden">
+            <p>Glyphs vibrate at lunar resonance. Intercepted signals match Apollo blackbox anomalies from Mare Imbrium.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- WARDENRY LEAGUE -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/wardenary_league.png" alt="Wardenry League fantasy football crests">
+        <img src="assets/images/emporium/wardenary_league.png" alt="Fantasy football crests">
         <h2>Wardenry League Chronicles</h2>
         <p class="subtitle">Fantasy football kits fused with interactive match lore.</p>
         <a href="INSERT_WARDENRY_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-wardenry')">📖 Reveal Wardenry Lore</button>
+          <div id="lore-wardenry" class="lore-hidden">
+            <p>Kits carry crest sigils tied to scrolls retrieved from elemental tournaments post-Realm War IX.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- ECHO LEAGUE -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/Echo_League.png" alt="Echo League visual with glitch overlays and sport motifs">
+        <img src="assets/images/emporium/Echo_League.png" alt="Glitch overlays and sport motifs">
         <h2>Echo League Archives</h2>
-        <p class="subtitle">F1 and football designs with our signature twist and aesthetic overlays.</p>
+        <p class="subtitle">F1 and football designs with our signature twist and overlays.</p>
         <a href="INSERT_SPORT_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-echo')">📖 Reveal Echo Lore</button>
+          <div id="lore-echo" class="lore-hidden">
+            <p>Broadcast patterns trace to Codec Sigma anomalies. Glitch sigils pulse to real-time telemetry failures.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- COSMIC FRINGE -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/cosmic_fringe.png" alt="Cosmic Fringe showcasing stellar ships and astral tech">
+        <img src="assets/images/emporium/cosmic_fringe.png" alt="Stellar ships and astral tech">
         <h2>Cosmic Fringe</h2>
         <p class="subtitle">Sci-fi themed tees including stellar ships and speculative tech.</p>
         <a href="INSERT_SCIFI_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-cosmic')">📖 Reveal Cosmic Lore</button>
+          <div id="lore-cosmic" class="lore-hidden">
+            <p>Recovered sigils match jump route maps from Sector 88 wreckage. Geometry correlates with starfold fractures.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- SIGIL STUDIES -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/sigil_studies.png" alt="Sigil Studies Lab with modular glyphs and reactive patterns">
+        <img src="assets/images/emporium/sigil_studies.png" alt="Modular glyphs and reactive patterns">
         <h2>Sigil Studies Lab</h2>
         <p class="subtitle">Interactive glyphwear—sound-reactive, modular, and mythic.</p>
         <a href="INSERT_SIGIL_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-sigil')">📖 Reveal Sigil Lore</button>
+          <div id="lore-sigil" class="lore-hidden">
+            <p>Runes pulse in response to acoustic input. Linked to sonic archives unearthed in Harmonic Stone Lab X-37.</p>
+          </div>
+        </div>
       </div>
-
+      <!-- ARCHIVE OF THE VOID -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/archive_of_the_void.png" alt="Archive of the Void glyphs surrounded by cosmic distortion">
+        <img src="assets/images/emporium/archive_of_the_void.png" alt="Cosmic distortion and UFO glyphs">
         <h2>Archive of the Void</h2>
         <p class="subtitle">Conspiracy-inspired visuals—UFOs, moon lore, and redacted drops.</p>
         <a href="INSERT_VOID_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-void')">📖 Reveal Void Lore</button>
+          <div id="lore-void" class="lore-hidden">
+            <p>Intercepted during a signal breach in 1985. Sigils map moon sectors cloaked by blackout protocols.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- DESIGN ALCHEMY -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/design_alchemy.png" alt="Design Alchemy lab visuals with kinetic symbols">
+        <img src="assets/images/emporium/design_alchemy.png" alt="Lab visuals and kinetic symbols">
         <h2>Design Alchemy</h2>
         <p class="subtitle">Experimental concepts with reactive ink, AR triggers, and more.</p>
         <a href="INSERT_INNOVATION_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-alchemy')">📖 Reveal Alchemy Lore</button>
+          <div id="lore-alchemy" class="lore-hidden">
+            <p>Crafted within Lab IX using kinetic ink drawn from harmonic particle wells. Sigil formulas still unstable.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- FORGOTTEN RUNES -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/forgotten_runes.png" alt="Forgotten Runes vault covered in mossy scrolls">
+        <img src="assets/images/emporium/forgotten_runes.png" alt="Vault covered in mossy scrolls">
         <h2>Forgotten Runes Vault</h2>
-        <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and fantasy relics.</p>
+        <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and relics.</p>
         <a href="INSERT_MIDDLE_EARTH_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-runes')">📖 Reveal Runes Lore</button>
+          <div id="lore-runes" class="lore-hidden">
+            <p>Scroll fragments unearthed near Mistfell match glyph dialects spoken during the Feral Council’s final stand.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- CHRONO ARCHIVE -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/chrono_archive.png" alt="Chrono Archive cracked timepieces and date-based sigils">
+        <img src="assets/images/emporium/chrono_archive.png" alt="Cracked timepieces and date glyphs">
         <h2>Chrono Archive</h2>
-        <p class="subtitle">Tees that mark real-world events with a mythic or geek culture twist.</p>
+        <p class="subtitle">Tees that mark real-world events with mythic or geek culture twists.</p>
         <a href="INSERT_EVENTS_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-chrono')">📖 Reveal Chrono Lore</button>
+          <div id="lore-chrono" class="lore-hidden">
+            <p>Date-glyphs recovered from comet broadcasts. Timelines align with tech cult milestones across myth networks.</p>
+          </div>
+        </div>
       </div>
 
+      <!-- UNDERLAYER MARKET -->
       <div class="collection-tile">
-        <img src="assets/images/emporium/underlayer_market.png" alt="Underlayer Market stitched glyph and magical discount chest">
+        <img src="assets/images/emporium/underlayer_market.png" alt="Magical discount chest and stitched glyphs">
         <h2>The Underlayer Market</h2>
         <p class="subtitle">Customizable tees, personal drops, and magical markdowns.</p>
         <a href="INSERT_BARGAINS_LINK">Enter Collection</a>
+        <div class="lore-toggle">
+          <button onclick="toggleLore('lore-market')">📖 Reveal Market Lore</button>
+          <div id="lore-market" class="lore-hidden">
+            <p>Discount glyph stitched into rogue merchant caches. Vault keys rotate in encoded bargain dialects.</p>
+          </div>
+        </div>
       </div>
+
     </div> <!-- end collection-grid -->
-
-    <!-- 🔮 Lore Reveal Blocks -->
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-lunar')">📖 Reveal Lunar Lore</button>
-      <div id="lore-lunar" class="lore-hidden">
-        <p>Interception site: Mare Imbrium. Glyphs vibrate at lunar resonance frequencies tied to Apollo blackbox anomalies.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-wardenry')">📖 Reveal Wardenry Lore</button>
-      <div id="lore-wardenry" class="lore-hidden">
-        <p>Founded after the Clash of Nine Realms. Kits carry crest sigils tied to ancient match scrolls and war-tactic overlays.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-echo')">📖 Reveal Echo Lore</button>
-      <div id="lore-echo" class="lore-hidden">
-        <p>Echo clusters mirror glitch bursts recorded during sportcast collapses over three continents. Source: Codec Sigma.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-cosmic')">📖 Reveal Cosmic Lore</button>
-      <div id="lore-cosmic" class="lore-hidden">
-        <p>Navigation sigils recovered from wrecked stellar freighter. Their geometry maps known astral fractures between jump routes.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-sigil')">📖 Reveal Sigil Lore</button>
-      <div id="lore-sigil" class="lore-hidden">
-        <p>Runes pulse in response to acoustic input. Glyph chain matches sonic archives unearthed in Harmonic Stone lab X-37.</p>
-      </div>
-    </div>
-
-
-
-<div class="lore-toggle">
-      <button onclick="toggleLore('lore-void')">📖 Reveal Void Lore</button>
-      <div id="lore-void" class="lore-hidden">
-        <p>Intercepted during an orbital signal breach in 1985. Sigil arrays map blackout zones across multiple moon sectors.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-alchemy')">📖 Reveal Alchemy Lore</button>
-      <div id="lore-alchemy" class="lore-hidden">
-        <p>Crafted within Lab IX using kinetic ink harvested from harmonic particle wells. Results encoded within glyph symmetry scrolls.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-runes')">📖 Reveal Runes Lore</button>
-      <div id="lore-runes" class="lore-hidden">
-        <p>Discovered beneath moss-covered ruins. Scroll fragments matched ancient dialects spoken in the Feral Council’s final ward.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-chrono')">📖 Reveal Chrono Lore</button>
-      <div id="lore-chrono" class="lore-hidden">
-        <p>Date-glyphs recovered from comet transmission logs. Encoded timelines point to lost tech rituals across geek culture milestones.</p>
-      </div>
-    </div>
-
-    <div class="lore-toggle">
-      <button onclick="toggleLore('lore-market')">📖 Reveal Market Lore</button>
-      <div id="lore-market" class="lore-hidden">
-        <p>Accessed via stitched vault keys found inside rogue merchant caches. Discounts encoded using rotating Underlayer glyph chains.</p>
-      </div>
-    </div>
   </section>
 
   <footer>
