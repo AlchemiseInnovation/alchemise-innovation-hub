@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Breach | Alchemise Innovation</title>
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #ffe486;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #9df2ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #fdf897;
+    }
+
+    .portal-hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .portal-hero img {
+      width: 220px;
+      max-width: 90%;
+      border-radius: 50%;
+      box-shadow: 0 0 25px #7766ff;
+      animation: pulsePortal 2.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulsePortal {
+      0% { transform: scale(0.95); box-shadow: 0 0 15px #7766ff; }
+      100% { transform: scale(1.05); box-shadow: 0 0 30px #ffe486; }
+    }
+
+    .drop-title {
+      font-size: 1.6rem;
+      color: #ffe486;
+      margin-top: 1rem;
+    }
+
+    .drop-subtitle {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .drop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .drop-tile {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      padding: 1rem;
+      text-align: center;
+      animation: floatIn 0.8s ease forwards;
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .drop-tile img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #333;
+      margin-bottom: 1rem;
+    }
+
+    .drop-tile h3 {
+      color: #ffe486;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .glyph-thread {
+      font-size: 0.95rem;
+      color: #9df2ff;
+      margin-bottom: 1rem;
+    }
+
+    .drop-tile a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #7766ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .drop-tile a:hover {
+      background-color: #9df2ff;
+      color: #000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🌀 Portal Breach</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="lore.html">Lore</a>
+    </nav>
+  </header>
+
+  <section class="portal-hero">
+    <img src="assets/portal.gif" alt="Glyph Rift Breach" />
+    <h2 class="drop-title">Rift Fragment Detected</h2>
+    <p class="drop-subtitle">New transmissions bleeding through the vault grid...</p>
+  </section>
+  <section class="drop-grid">
+
+    <div class="drop-tile">
+      <img src="assets/images/newdrop_01.png" alt="Design 1" />
+      <h3>Transmission 001-A</h3>
+      <p class="glyph-thread">Stitched during the Mare Lumen Pulse • Artifact logged under Vault IX</p>
+      <a href="shop.html#vault-001a">Unseal Vault</a>
+    </div>
+
+    <div class="drop-tile">
+      <img src="assets/images/newdrop_02.png" alt="Design 2" />
+      <h3>Transmission 001-B</h3>
+      <p class="glyph-thread">Interference traced to Echo Layer • Glyph fusion confirmed in playback logs</p>
+      <a href="shop.html#vault-001b">Unseal Vault</a>
+    </div>
+
+    <div class="drop-tile">
+      <img src="assets/images/newdrop_03.png" alt="Design 3" />
+      <h3>Transmission 001-C</h3>
+      <p class="glyph-thread">Codex stitch detected in harmonic drift • Frequency match: Sigil 7766</p>
+      <a href="shop.html#vault-001c">Unseal Vault</a>
+    </div>
+
+    <div class="drop-tile">
+      <img src="assets/images/newdrop_04.png" alt="Design 4" />
+      <h3>Transmission 001-D</h3>
+      <p class="glyph-thread">Trace glyph spotted during moonfold flare • Ambient distortion archived</p>
+      <a href="shop.html#vault-001d">Unseal Vault</a>
+    </div>
+
+  </section>
+  <footer>
+    <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
+      <p style="color:#888; font-size:0.95rem;">
+        🧶 Lore threads stitched with meaning · 
+        <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
+        <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
+        <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Reserved for future portal upgrades — ambient effects, timed animations, dynamic glyph shimmer
+    console.log("Portal breach loaded. Transmission tiles active.");
+  </script>
+</body>
+</html>
