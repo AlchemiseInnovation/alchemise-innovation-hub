@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles/style.css" />
 
   <style>
-    /* RESET & BASE STYLES */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -152,6 +151,49 @@
       background: #7766ff;
     }
 
+    .lore-toggle {
+      margin: 2rem auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .lore-toggle button {
+      background-color: #7766ff;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 10px #7766ff;
+    }
+
+    .lore-toggle button:hover {
+      background-color: #9df2ff;
+      color: #000;
+      box-shadow: 0 0 12px #9df2ff;
+    }
+
+    .lore-hidden {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease;
+    }
+
+    .lore-visible {
+      opacity: 1;
+      max-height: 500px;
+      margin-top: 1rem;
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 12px #7766ff;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -163,7 +205,6 @@
 </head>
 
 <body>
-
   <header>
     <h1><span class="brand">Alchemise Innovation</span> <span class="hub-label">Collections</span></h1>
     <nav>
@@ -186,14 +227,12 @@
         <p class="subtitle">Glow-in-the-dark tees, harmonic glyphs, and moon-inspired visuals.</p>
         <a href="INSERT_LUNAR_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/wardenary_league.png" alt="Wardenry League fantasy football crests">
         <h2>Wardenry League Chronicles</h2>
         <p class="subtitle">Fantasy football kits fused with interactive match lore.</p>
         <a href="INSERT_WARDENRY_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/Echo_League.png" alt="Echo League visual with glitch overlays and sport motifs">
         <h2>Echo League Archives</h2>
@@ -206,55 +245,109 @@
         <p class="subtitle">Sci-fi themed tees including stellar ships and speculative tech.</p>
         <a href="INSERT_SCIFI_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/sigil_studies.png" alt="Sigil Studies Lab with modular glyphs and reactive patterns">
         <h2>Sigil Studies Lab</h2>
         <p class="subtitle">Interactive glyphwear—sound-reactive, modular, and mythic.</p>
         <a href="INSERT_SIGIL_LINK">Enter Collection</a>
       </div>
+    </div>
 
+
+        <div class="collection-grid">
       <div class="collection-tile">
         <img src="assets/images/emporium/archive_of_the_void.png" alt="Archive of the Void glyphs surrounded by cosmic distortion">
         <h2>Archive of the Void</h2>
         <p class="subtitle">Conspiracy-inspired visuals—UFOs, moon lore, and redacted drops.</p>
         <a href="INSERT_VOID_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/design_alchemy.png" alt="Design Alchemy lab visuals with kinetic symbols">
         <h2>Design Alchemy</h2>
         <p class="subtitle">Experimental concepts with reactive ink, AR triggers, and more.</p>
         <a href="INSERT_INNOVATION_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/forgotten_runes.png" alt="Forgotten Runes vault covered in mossy scrolls">
         <h2>Forgotten Runes Vault</h2>
         <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and fantasy relics.</p>
         <a href="INSERT_MIDDLE_EARTH_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/chrono_archive.png" alt="Chrono Archive cracked timepieces and date-based sigils">
         <h2>Chrono Archive</h2>
         <p class="subtitle">Tees that mark real-world events with a mythic or geek culture twist.</p>
         <a href="INSERT_EVENTS_LINK">Enter Collection</a>
       </div>
-
       <div class="collection-tile">
         <img src="assets/images/emporium/underlayer_market.png" alt="Underlayer Market stitched glyph and magical discount chest">
         <h2>The Underlayer Market</h2>
         <p class="subtitle">Customizable tees, personal drops, and magical markdowns.</p>
         <a href="INSERT_BARGAINS_LINK">Enter Collection</a>
       </div>
-
     </div> <!-- end collection-grid -->
-  </section>
+
+    <!-- 🌌 Lore Toggles for Final 5 -->
+
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-void')">📖 Reveal Void Lore</button>
+      <div id="lore-void" class="lore-hidden">
+        <p>
+          Discovered during a surveillance blackout in 1985. Glyph pulses match intercepted transmissions known only as “Operation Echo-Null.”
+        </p>
+      </div>
+    </div>
+
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-alchemy')">📖 Reveal Alchemy Lore</button>
+      <div id="lore-alchemy" class="lore-hidden">
+        <p>
+          Aesthetic feedback loops and reactive triggers originate from early kinetic ink experiments led by sigil technologists in Lab IX.
+        </p>
+      </div>
+    </div>
+
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-runes')">📖 Reveal Rune Lore</button>
+      <div id="lore-runes" class="lore-hidden">
+        <p>
+          Scroll fragments uncovered near Mistfell Ruins translated glyphs pointing to the Feral Council’s vanished arcane vault.
+        </p>
+      </div>
+    </div>
+
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-chrono')">📖 Reveal Chrono Lore</button>
+      <div id="lore-chrono" class="lore-hidden">
+        <p>
+          Time-stamped glyphs found encoded in lunar eclipse broadcasts. Some align with key dates in fringe mythos and tech subcultures.
+        </p>
+      </div>
+    </div>
+
+    <div class="lore-toggle">
+      <button onclick="toggleLore('lore-market')">📖 Reveal Market Lore</button>
+      <div id="lore-market" class="lore-hidden">
+        <p>
+          Stitched discount glyph traced to rogue merchant faction known as The Underlayer. Their scroll vault remains guarded by rotating sigil locks.
+        </p>
+      </div>
+    </div>
+
+
+      </section>
 
   <footer>
     <p>&copy; 2025 Alchemise Innovation. Garments laced with story threads.</p>
   </footer>
+
+  <!-- 🧠 Lore Toggle Script -->
+  <script>
+    function toggleLore(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle("lore-visible");
+    }
+  </script>
 
 </body>
 </html>
