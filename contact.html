@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Alchemise Innovation</title>
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffe486;
+    }
+
+    nav a {
+      color: #9df2ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #fdf897;
+    }
+
+    .toggle-buttons {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .toggle-buttons button {
+      background-color: #7766ff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .toggle-buttons button:hover {
+      background-color: #9df2ff;
+      color: #000;
+      box-shadow: 0 0 12px #ffe486;
+    }
+
+    .contact-layer {
+      display: none;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .contact-layer.visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .layer-title {
+      font-size: 1.5rem;
+      color: #ffe486;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .layer-title::after {
+      content: " ✦";
+      color: #7766ff;
+      animation: glowPulse 1.5s infinite ease-in-out alternate;
+      position: absolute;
+      right: -1.2rem;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px #7766ff; }
+      100% { text-shadow: 0 0 10px #ffe486; }
+    }
+
+    .layer-text {
+      font-size: 1.05rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .contact-details {
+      margin-top: 1.2rem;
+    }
+
+    .contact-details p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #9df2ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      background-color: #111;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Dispatch Node</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="lore.html">Lore</a>
+    </nav>
+  </header>
+
+  <div class="toggle-buttons">
+    <button onclick="switchLayer('layer-scroll')">📜 Scroll View</button>
+    <button onclick="switchLayer('layer-panel')">🛠 Contact View</button>
+  </div>
+  <div id="layer-scroll" class="contact-layer visible">
+    <div class="layer-title">📜 Dispatch Scroll</div>
+    <div class="layer-text">
+      When the glyphs pulse and the vaults hum, messengers seek the Stitcher.  
+      <br><br>
+      To send word across the lattice, inscribe your signal deep within the threads. Scrolls once cast through Archive Node IV carried requests encrypted in mist dialects — yours may yet shimmer.  
+      <br><br>
+      Should your query echo the lore’s cadence, the Archivists will answer.
+    </div>
+  </div>
+
+  <div id="layer-panel" class="contact-layer">
+    <div class="layer-title">🛠 Contact Panel</div>
+    <div class="layer-text">
+      For general inquiries, feedback, or collaboration ideas, dispatch your message using the channels below.
+      <div class="contact-details">
+        <p>📮 Email: <a href="mailto:contact@alchemiseinnovation.com">contact@alchemiseinnovation.com</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me/18772241042" target="_blank">+1 877-224-1042</a></p>
+        <p>🧵 Instagram: <a href="https://instagram.com/alchemiseinnovation" target="_blank">@alchemiseinnovation</a></p>
+      </div>
+      <p>We usually respond within 1–2 vault cycles (i.e., business days).</p>
+    </div>
+  </div>
+  <footer>
+    <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
+      <p style="color:#888; font-size:0.95rem;">
+        🧶 Lore threads stitched with meaning · 
+        <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
+        <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
+        <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function switchLayer(layerId) {
+      const layers = document.querySelectorAll('.contact-layer');
+      layers.forEach(layer => {
+        layer.classList.remove('visible');
+      });
+
+      const activeLayer = document.getElementById(layerId);
+      void activeLayer.offsetWidth; // Force reflow for animation
+      activeLayer.classList.add('visible');
+    }
+  </script>
+</body>
+</html>
