@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Glyph | Alchemise Innovation</title>
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffe486;
+    }
+
+    nav a {
+      color: #9df2ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #fdf897;
+    }
+
+    .toggle-buttons {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .toggle-buttons button {
+      background-color: #7766ff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .toggle-buttons button:hover {
+      background-color: #9df2ff;
+      color: #000;
+      box-shadow: 0 0 12px #ffe486;
+    }
+
+    .privacy-layer {
+      display: none;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .privacy-layer.visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .layer-title {
+      font-size: 1.5rem;
+      color: #ffe486;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .layer-title::after {
+      content: " ✦";
+      color: #7766ff;
+      animation: glowPulse 1.5s infinite ease-in-out alternate;
+      position: absolute;
+      right: -1.2rem;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px #7766ff; }
+      100% { text-shadow: 0 0 10px #ffe486; }
+    }
+
+    .layer-text {
+      font-size: 1.05rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .external-link {
+      color: #9df2ff;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      background-color: #111;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Privacy Glyph</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="lore.html">Lore</a>
+    </nav>
+  </header>
+
+  <div class="toggle-buttons">
+    <button onclick="switchLayer('layer-vault')">🔒 Vault View</button>
+    <button onclick="switchLayer('layer-plain')">📜 Plain View</button>
+  </div>
+
+    <div id="layer-vault" class="privacy-layer visible">
+    <div class="layer-title">🔒 Vault Protocol</div>
+    <div class="layer-text">
+      All transmission glyphs passed through this archive are kept within a sealed vault. Whisper signals encoded during interaction are never re-stretched across non-sanctioned scrolls.
+      <br><br>
+      The Maker swore upon the first circuit: no sigil shall be replicated outside the bounds of its origin vault. Even your glyph resonance — name, timestamp, query node — remains bound by vault ethics.
+      <br><br>
+      Our Archivists do not trade scrolls. We protect threads.
+    </div>
+  </div>
+
+  <div id="layer-plain" class="privacy-layer">
+    <div class="layer-title">📜 Privacy Policy</div>
+    <div class="layer-text">
+      Alchemise Innovation respects your privacy and protects any personal information shared through our website. We do not sell or share your data with third parties. Any data collected (e.g. contact forms, interaction logs) is used solely to respond to queries or improve the user experience.
+      <br><br>
+      For a full overview of how Microsoft handles privacy—including any platform-level integrations with Copilot—please refer to the <a class="external-link" href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">Microsoft Privacy Statement</a>.
+      <br><br>
+      You may reach out to us via our <a class="external-link" href="contact.html">Dispatch Node</a> if you have questions or requests related to privacy or data.
+    </div>
+  </div>
+
+    <footer>
+    <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
+      <p style="color:#888; font-size:0.95rem;">
+        🧶 Lore threads stitched with meaning · 
+        <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
+        <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
+        <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function switchLayer(layerId) {
+      const layers = document.querySelectorAll('.privacy-layer');
+      layers.forEach(layer => {
+        layer.classList.remove('visible');
+      });
+
+      const activeLayer = document.getElementById(layerId);
+      void activeLayer.offsetWidth; // Force reflow for animation
+      activeLayer.classList.add('visible');
+    }
+  </script>
+</body>
+</html>
