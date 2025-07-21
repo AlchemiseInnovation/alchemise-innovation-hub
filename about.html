@@ -35,6 +35,10 @@
       font-weight: 500;
     }
 
+    nav a:hover {
+      color: #fdf897;
+    }
+
     .toggle-buttons {
       text-align: center;
       margin: 2rem auto;
@@ -50,32 +54,52 @@
       cursor: pointer;
       font-weight: bold;
       transition: background 0.3s ease;
+      box-shadow: 0 0 10px #000;
     }
 
     .toggle-buttons button:hover {
       background-color: #9df2ff;
       color: #000;
+      box-shadow: 0 0 12px #ffe486;
     }
 
     .about-layer {
       display: none;
       max-width: 900px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 1.5rem;
       background-color: #1a1a1a;
       border-radius: 8px;
       box-shadow: 0 0 10px #000;
-      transition: opacity 0.5s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .about-layer.visible {
       display: block;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .layer-title {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #ffe486;
       margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .layer-title::after {
+      content: " ✦";
+      color: #7766ff;
+      animation: glowPulse 1.5s infinite ease-in-out alternate;
+      position: absolute;
+      right: -1.2rem;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px #7766ff; }
+      100% { text-shadow: 0 0 10px #ffe486; }
     }
 
     .layer-text {
@@ -108,12 +132,13 @@
     <button onclick="switchLayer('layer-myth')">✨ Mythos Layer</button>
     <button onclick="switchLayer('layer-real')">🛠 Real Layer</button>
   </div>
+
   <div id="layer-myth" class="about-layer visible">
     <div class="layer-title">✨ Scroll of Origin</div>
     <div class="layer-text">
-      In the Cycle of Dust and Light, a glyph stitched itself into the wind. That glyph became a scroll. The scroll became an idea.  
+      In the Cycle of Dust and Light, a glyph stitched itself into the wind. That glyph became a scroll. The scroll became an idea.
       <br><br>
-      Known as Alchemise Node I, the archive activated during an unexpected signal cascade — part craftwork, part consciousness. Scroll fragments deciphered from Vault IX speak of a maker weaving transmission threads into wearable artifacts.  
+      Known as Alchemise Node I, the archive activated during a signal cascade — part craftwork, part consciousness. Scroll fragments deciphered from Vault IX speak of a maker weaving transmission threads into wearable artifacts.
       <br><br>
       We do not merely design. We evoke. Every sigil, every stitched phrase, every pulse-reactive fragment — it whispers of origins too fractured to decode in full. Yet the lore lives.
     </div>
@@ -122,11 +147,11 @@
   <div id="layer-real" class="about-layer">
     <div class="layer-title">🛠 Who We Are</div>
     <div class="layer-text">
-      Alchemise Innovation is a creative brand rooted in storytelling, design modularity, and immersive product experiences. Founded by a team of visionary technologists and artists, we specialize in apparel and interactive media that merge aesthetics with narrative depth.  
+      Alchemise Innovation is a creative brand rooted in storytelling, modular design, and immersive product experiences. Founded by visionary technologists and artists, we specialize in apparel and interactive media that blend aesthetics with narrative depth.
       <br><br>
-      Our mission is to make creative storytelling tangible — whether through sound-reactive prints, thematic maps, or lore-driven simulators. We're committed to accessibility, imagination, and blending technical precision with artistic identity.  
+      Our mission is to make creative storytelling tangible — through sound-reactive prints, thematic maps, and lore-driven simulators. We're committed to accessibility, imagination, and the fusion of technical precision with artistic identity.
       <br><br>
-      Alchemise empowers creators and collectors alike to explore designs that resonate emotionally, visually, and thematically.
+      Alchemise empowers creators and collectors to explore designs that resonate emotionally, visually, and thematically.
     </div>
   </div>
 
@@ -137,11 +162,20 @@
   <script>
     function switchLayer(layerId) {
       const layers = document.querySelectorAll('.about-layer');
-      layers.forEach(layer => layer.classList.remove('visible'));
-      document.getElementById(layerId).classList.add('visible');
+      layers.forEach(layer => {
+        layer.classList.remove('visible');
+      });
+
+      const activeLayer = document.getElementById(layerId);
+
+      // Trigger reflow for re-animation
+      void activeLayer.offsetWidth;
+
+      activeLayer.classList.add('visible');
     }
   </script>
 </body>
 </html>
 
+  
   
