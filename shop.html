@@ -65,7 +65,7 @@
       display: flex;
       justify-content: center;
       background-color: #0e0e1c;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
 
     .emporium-banner img {
@@ -203,146 +203,164 @@
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1><span class="brand">Alchemise Innovation</span> <span class="hub-label">Collections</span></h1>
+    <nav>
+      <a href="index.html">Return to Hub</a>
+    </nav>
+  </header>
+
   <section id="emporium">
-    <h1>🧭 Welcome to the Emporium</h1>
+    <div class="emporium-banner">
+      <img src="assets/images/emporium/Emporium_Header.png" alt="Vault doorway etched with glowing glyphs and lore energy">
+    </div>
+
+
+
+
+        <h1>🧭 Welcome to the Emporium</h1>
     <p>Choose your archive below to explore our themed apparel collections. Each one is steeped in lore, but clearly labeled for easy discovery.</p>
 
     <div class="collection-grid">
 
-      <!-- LUNAR TRANSMISSIONS -->
+      <!-- Lunar Transmissions -->
       <div class="collection-tile">
         <img src="assets/images/emporium/Lunar_Transmissions.png" alt="Moon glyphs and glow elements">
         <h2>Lunar Transmissions</h2>
         <p class="subtitle">Glow-in-the-dark tees, harmonic glyphs, and moon-inspired visuals.</p>
         <a href="INSERT_LUNAR_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-lunar')">📖 Reveal Lunar Lore</button>
+          <button onclick="toggleLore('lore-lunar')">📖 Reveal Lore</button>
           <div id="lore-lunar" class="lore-hidden">
-            <p>Glyphs vibrate at lunar resonance. Intercepted signals match Apollo blackbox anomalies from Mare Imbrium.</p>
+            <p>Glyphs vibrate at lunar resonance. Intercepted signals match Apollo anomalies traced to Mare Imbrium.</p>
           </div>
         </div>
       </div>
 
-      <!-- WARDENRY LEAGUE -->
+      <!-- Wardenry League -->
       <div class="collection-tile">
         <img src="assets/images/emporium/wardenary_league.png" alt="Fantasy football crests">
         <h2>Wardenry League Chronicles</h2>
         <p class="subtitle">Fantasy football kits fused with interactive match lore.</p>
         <a href="INSERT_WARDENRY_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-wardenry')">📖 Reveal Wardenry Lore</button>
+          <button onclick="toggleLore('lore-wardenry')">📖 Reveal Lore</button>
           <div id="lore-wardenry" class="lore-hidden">
-            <p>Kits carry crest sigils tied to scrolls retrieved from elemental tournaments post-Realm War IX.</p>
+            <p>Crest sigils trace back to enchanted tournaments held after the Realm War IX. Commentary runes still pulse in match logs.</p>
           </div>
         </div>
       </div>
 
-      <!-- ECHO LEAGUE -->
+      <!-- Echo League -->
       <div class="collection-tile">
         <img src="assets/images/emporium/Echo_League.png" alt="Glitch overlays and sport motifs">
         <h2>Echo League Archives</h2>
         <p class="subtitle">F1 and football designs with our signature twist and overlays.</p>
         <a href="INSERT_SPORT_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-echo')">📖 Reveal Echo Lore</button>
+          <button onclick="toggleLore('lore-echo')">📖 Reveal Lore</button>
           <div id="lore-echo" class="lore-hidden">
-            <p>Broadcast patterns trace to Codec Sigma anomalies. Glitch sigils pulse to real-time telemetry failures.</p>
+            <p>Glitch sigils resonate with telemetry bursts from sportcast collapses. Correlation logged in Codec Sigma footage.</p>
           </div>
         </div>
       </div>
 
-      <!-- COSMIC FRINGE -->
+      <!-- Cosmic Fringe -->
       <div class="collection-tile">
         <img src="assets/images/emporium/cosmic_fringe.png" alt="Stellar ships and astral tech">
         <h2>Cosmic Fringe</h2>
         <p class="subtitle">Sci-fi themed tees including stellar ships and speculative tech.</p>
         <a href="INSERT_SCIFI_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-cosmic')">📖 Reveal Cosmic Lore</button>
+          <button onclick="toggleLore('lore-cosmic')">📖 Reveal Lore</button>
           <div id="lore-cosmic" class="lore-hidden">
-            <p>Recovered sigils match jump route maps from Sector 88 wreckage. Geometry correlates with starfold fractures.</p>
+            <p>Sigils recovered from wrecked freighter in Sector 88. Starfold coordinates still pulse through jumper glyphs.</p>
           </div>
         </div>
       </div>
 
-      <!-- SIGIL STUDIES -->
+      <!-- Sigil Studies -->
       <div class="collection-tile">
         <img src="assets/images/emporium/sigil_studies.png" alt="Modular glyphs and reactive patterns">
         <h2>Sigil Studies Lab</h2>
         <p class="subtitle">Interactive glyphwear—sound-reactive, modular, and mythic.</p>
         <a href="INSERT_SIGIL_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-sigil')">📖 Reveal Sigil Lore</button>
+          <button onclick="toggleLore('lore-sigil')">📖 Reveal Lore</button>
           <div id="lore-sigil" class="lore-hidden">
-            <p>Runes pulse in response to acoustic input. Linked to sonic archives unearthed in Harmonic Stone Lab X-37.</p>
+            <p>Runes pulse with voice patterns from Lab X-37. Harmonic resonance unlocks glyph pathways across modular tiles.</p>
           </div>
         </div>
       </div>
-      <!-- ARCHIVE OF THE VOID -->
+
+
+
+            <!-- Archive of the Void -->
       <div class="collection-tile">
         <img src="assets/images/emporium/archive_of_the_void.png" alt="Cosmic distortion and UFO glyphs">
         <h2>Archive of the Void</h2>
         <p class="subtitle">Conspiracy-inspired visuals—UFOs, moon lore, and redacted drops.</p>
         <a href="INSERT_VOID_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-void')">📖 Reveal Void Lore</button>
+          <button onclick="toggleLore('lore-void')">📖 Reveal Lore</button>
           <div id="lore-void" class="lore-hidden">
             <p>Intercepted during a signal breach in 1985. Sigils map moon sectors cloaked by blackout protocols.</p>
           </div>
         </div>
       </div>
 
-      <!-- DESIGN ALCHEMY -->
+      <!-- Design Alchemy -->
       <div class="collection-tile">
         <img src="assets/images/emporium/design_alchemy.png" alt="Lab visuals and kinetic symbols">
         <h2>Design Alchemy</h2>
         <p class="subtitle">Experimental concepts with reactive ink, AR triggers, and more.</p>
         <a href="INSERT_INNOVATION_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-alchemy')">📖 Reveal Alchemy Lore</button>
+          <button onclick="toggleLore('lore-alchemy')">📖 Reveal Lore</button>
           <div id="lore-alchemy" class="lore-hidden">
             <p>Crafted within Lab IX using kinetic ink drawn from harmonic particle wells. Sigil formulas still unstable.</p>
           </div>
         </div>
       </div>
 
-      <!-- FORGOTTEN RUNES -->
+      <!-- Forgotten Runes -->
       <div class="collection-tile">
         <img src="assets/images/emporium/forgotten_runes.png" alt="Vault covered in mossy scrolls">
         <h2>Forgotten Runes Vault</h2>
         <p class="subtitle">Middle-Earth inspired garments, glyphs, ruins, and relics.</p>
         <a href="INSERT_MIDDLE_EARTH_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-runes')">📖 Reveal Runes Lore</button>
+          <button onclick="toggleLore('lore-runes')">📖 Reveal Lore</button>
           <div id="lore-runes" class="lore-hidden">
             <p>Scroll fragments unearthed near Mistfell match glyph dialects spoken during the Feral Council’s final stand.</p>
           </div>
         </div>
       </div>
 
-      <!-- CHRONO ARCHIVE -->
+      <!-- Chrono Archive -->
       <div class="collection-tile">
         <img src="assets/images/emporium/chrono_archive.png" alt="Cracked timepieces and date glyphs">
         <h2>Chrono Archive</h2>
         <p class="subtitle">Tees that mark real-world events with mythic or geek culture twists.</p>
         <a href="INSERT_EVENTS_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-chrono')">📖 Reveal Chrono Lore</button>
+          <button onclick="toggleLore('lore-chrono')">📖 Reveal Lore</button>
           <div id="lore-chrono" class="lore-hidden">
             <p>Date-glyphs recovered from comet broadcasts. Timelines align with tech cult milestones across myth networks.</p>
           </div>
         </div>
       </div>
 
-      <!-- UNDERLAYER MARKET -->
+      <!-- Underlayer Market -->
       <div class="collection-tile">
         <img src="assets/images/emporium/underlayer_market.png" alt="Magical discount chest and stitched glyphs">
         <h2>The Underlayer Market</h2>
         <p class="subtitle">Customizable tees, personal drops, and magical markdowns.</p>
         <a href="INSERT_BARGAINS_LINK">Enter Collection</a>
         <div class="lore-toggle">
-          <button onclick="toggleLore('lore-market')">📖 Reveal Market Lore</button>
+          <button onclick="toggleLore('lore-market')">📖 Reveal Lore</button>
           <div id="lore-market" class="lore-hidden">
             <p>Discount glyph stitched into rogue merchant caches. Vault keys rotate in encoded bargain dialects.</p>
           </div>
