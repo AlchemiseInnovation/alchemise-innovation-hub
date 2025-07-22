@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Video Control Deck</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f0;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .tv-screen {
+      position: relative;
+      border: 10px solid #333;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #0f0;
+      background-color: #111;
+    }
+    .tv-label {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-size: 0.8rem;
+      color: #ffcc00;
+      background: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    iframe, video {
+      width: 100%;
+      height: 180px;
+      border: none;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tv-screen">
+    <div class="tv-label">Camera A</div>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="tv-screen">
+    <div class="tv-label">Camera B</div>
+    <video autoplay loop muted>
+      <source src="../assets/video/sample.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="tv-screen">
+    <div class="tv-label">Camera C</div>
+    <video autoplay loop muted>
+      <source src="../assets/video/sample.mp4" type="video/mp4">
+    </video>
+  </div>
+</body>
+</html>
