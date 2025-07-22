@@ -117,7 +117,6 @@ nav a:hover {
 }
 
 /* QUICK ACCESS PANELS */
-
 #quick-panels {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -132,22 +131,15 @@ nav a:hover {
   padding: 2rem;
   background-color: #1a1a1a;
   border-radius: 12px;
+  animation: fadeUp 0.8s ease forwards;
 }
 
 .panel-content {
   flex-grow: 1;
-}
-
-.button-wrap,
-.market-buttons {
-  margin-top: auto;
   text-align: center;
-  padding-top: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
 }
-
-
-
-
 
 .panel:hover {
   transform: scale(1.05);
@@ -159,6 +151,11 @@ nav a:hover {
   margin: 0 auto 10px;
   width: 180px;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sigil-icon:hover {
+  transform: translateY(-6px) scale(1.05);
 }
 
 .panel h3 {
@@ -179,6 +176,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
 }
 
 /* SHOP & CREATE BUTTONS */
@@ -211,6 +209,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  padding-top: 1rem;
 }
 
 .market-main {
@@ -273,6 +272,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* EMPORIUM BANNER */
 .emporium-banner {
   width: 100%;
   display: flex;
@@ -282,14 +282,19 @@ footer {
   overflow: hidden;
 }
 
-
-
 .emporium-banner img {
-  width: auto;              /* allows full horizontal scaling */
-  height: auto;             /* lets image grow naturally */
-  max-width: 100%;          /* prevents overflow on wide screens */
-  max-height: none;         /* removes cropping */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
   display: block;
 }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 
