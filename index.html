@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <h1><span class="brand">Alchemise Innovation</span> <span class="hub-label">Hub</span></h1>
@@ -26,11 +27,13 @@
       <h2>Welcome to the Multiverse</h2>
       <p>Your gateway to immersive merch and speculative design</p>
       <div class="cta-container">
-        <a href="#quick-panels" class="cta-button market-main" onclick="fadeOverlay()">Explore the Hub</a>
+        <a href="#quick-panels" class="cta-button market-main">Explore the Hub</a>
       </div>
     </div>
   </section>
-  <!-- Quick Access Panels -->
+
+
+    <!-- Quick Access Panels -->
   <section id="quick-panels">
     <div class="panel fade-up" id="shop" data-sigil="shop">
       <img src="/assets/images/sigil-shop.png" alt="Shop Sigil" class="sigil-icon" />
@@ -105,7 +108,7 @@
     </div>
   </footer>
 
-  <!-- Enhanced Styles -->
+  <!-- Styles -->
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -117,6 +120,12 @@
       to { opacity: 0; }
     }
 
+    @keyframes flicker {
+      0%, 100% { opacity: 0.95; }
+      50% { opacity: 1; }
+      25%, 75% { opacity: 0.7; }
+    }
+
     .fade-out {
       animation: fadeOut 0.8s ease forwards;
     }
@@ -126,6 +135,7 @@
     }
 
     .cta-button {
+      position: relative;
       display: inline-block;
       padding: 0.8rem 1.6rem;
       color: white;
@@ -134,36 +144,74 @@
       font-weight: bold;
       box-shadow: 0 0 10px #000;
       transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: -30%;
+      width: 160%;
+      height: 160%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+      transition: opacity 0.4s ease;
+      opacity: 0;
+      border-radius: 50%;
     }
 
     .cta-button:hover {
       transform: scale(1.05);
+      animation: flicker 0.6s infinite;
+    }
+
+    .cta-button:hover::after {
+      opacity: 1;
     }
 
     .market-shop { background-color: #00c4cc; }
-    .market-shop:hover { background-color: #00a3aa; box-shadow: 0 0 12px #00f4ff; }
+    .market-shop:hover { background-color: #00a3aa; box-shadow: 0 0 14px #00f4ff; }
 
     .market-create { background-color: #ffce3b; color: #111; }
-    .market-create:hover { background-color: #ffc000; box-shadow: 0 0 12px #ffe97a; }
+    .market-create:hover { background-color: #ffc000; box-shadow: 0 0 14px #ffe97a; }
 
     .market-main { background-color: #7766ff; }
-    .market-main:hover { background-color: #5a4de0; box-shadow: 0 0 12px #aab1ff; }
+    .market-main:hover { background-color: #5a4de0; box-shadow: 0 0 14px #aab1ff; }
 
     .market-bargain { background-color: #ff5c5c; }
-    .market-bargain:hover { background-color: #e04242; box-shadow: 0 0 12px #ff9a9a; }
+    .market-bargain:hover { background-color: #e04242; box-shadow: 0 0 14px #ff9a9a; }
 
     .market-etsy { background-color: #d19fff; }
-    .market-etsy:hover { background-color: #b87be0; box-shadow: 0 0 12px #eac3ff; }
+    .market-etsy:hover { background-color: #b87be0; box-shadow: 0 0 14px #eac3ff; }
 
     .cta-container { text-align: center; margin-top: 1.5rem; }
   </style>
 
-  <!-- JavaScript Rituals -->
+  <!-- JavaScript -->
   <script>
+    // Fade out overlay
     function fadeOverlay() {
       document.getElementById('heroOverlay').classList.add('fade-out');
     }
+
+    // Magnetic Hover Effect
+    document.querySelectorAll('.cta-button').forEach(button => {
+      button.addEventListener('mousemove', e => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const moveX = (x - rect.width / 2) * 0.05;
+        const moveY = (y - rect.height / 2) * 0.05;
+        button.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translate(0, 0) scale(1)';
+      });
+    });
   </script>
+
   <script src="script/create.js"></script>
 </body>
 </html>
