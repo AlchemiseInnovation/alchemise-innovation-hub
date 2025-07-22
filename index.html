@@ -75,7 +75,6 @@
     <h2>Featured Designs</h2>
     <p>Coming soon: Middle Earth Mayhem, Fantasy Football Draft, Speculative Tees</p>
   </section>
-
   <section id="latest-rift" style="text-align:center; padding:3rem 1rem; background-color:#111; border-top:2px solid #444; border-bottom:2px solid #444;">
     <h2 style="color:#ffe486; font-size:1.6rem; animation: fadeIn 1s ease;">🌀 Latest Rift Drop</h2>
     <p style="color:#ccc; font-size:1rem; max-width:600px; margin:0.5rem auto;">
@@ -94,6 +93,7 @@
       transition: background 0.3s ease;
     ">Enter the Breach</a>
   </section>
+
   <section id="lore-section">
     <h2>Design Philosophy</h2>
     <p>We blend storytelling, speculative design, and wearable tech to create merch that’s more than just fabric—it’s a narrative.</p>
@@ -118,6 +118,15 @@
       to { opacity: 1; }
     }
 
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    .fade-out {
+      animation: fadeOut 0.8s ease forwards;
+    }
+
     .cta-container {
       text-align: center;
       margin-top: 1.5rem;
@@ -132,11 +141,12 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 0 10px #000;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
     .cta-button:hover {
       background-color: #5a4de0;
+      transform: scale(1.05);
     }
   </style>
 
@@ -147,7 +157,5 @@
     }
   </script>
   <script src="script/create.js"></script>
-
 </body>
 </html>
-
