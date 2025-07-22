@@ -146,6 +146,49 @@
       background-color: #9df2ff;
       color: #000;
     }
+
+.image-hover-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #333;
+  margin-bottom: 1rem;
+}
+
+.design-img,
+.tee-img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+}
+
+.design-img {
+  opacity: 1;
+  z-index: 2;
+}
+
+.tee-img {
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-hover-wrapper:hover .design-img {
+  opacity: 0;
+  transform: scale(1.02);
+}
+
+.image-hover-wrapper:hover .tee-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+    
   </style>
 </head>
 
@@ -168,12 +211,16 @@
 
   <section class="drop-grid">
 
-    <div class="drop-tile">
-      <img src="assets/images/moonday_drop.png" alt="Moon Day Drop" />
-      <h3>Transmission 002-M</h3>
-      <p class="glyph-thread">Decoded during Moon Phase IX • Harmonic glyph stitched in lunar drift</p>
-      <a href="shop.html#vault-002m">Unseal Vault</a>
-    </div>
+ <div class="drop-tile">
+  <div class="image-hover-wrapper">
+    <img src="assets/images/portal/moonday_design.png" alt="Moon Day Glyph" class="design-img" />
+    <img src="assets/images/portal/moonday_tee.png" alt="Moon Day Tee" class="tee-img" />
+  </div>
+  <h3>Transmission 002-M</h3>
+  <p class="glyph-thread">Decoded during Moon Phase IX • Harmonic glyph stitched in lunar drift</p>
+  <a href="shop.html#vault-002m">Unseal Vault</a>
+</div>
+
 
   </section>
 
