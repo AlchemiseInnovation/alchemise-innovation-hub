@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles/style.css" />
 
   <style>
-    /* Body & Header */
     body {
       background-color: #0d0d0d;
       font-family: 'Segoe UI', sans-serif;
@@ -40,7 +39,6 @@
       color: #fdf897;
     }
 
-    /* Hero Section */
     .portal-hero {
       text-align: center;
       padding: 3rem 1rem;
@@ -83,6 +81,100 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    .drop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .drop-tile {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      padding: 1rem;
+      text-align: center;
+      animation: floatIn 0.8s ease forwards;
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .image-hover-wrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #333;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .image-hover-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .design-img {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .tee-img {
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .image-hover-wrapper:hover .design-img {
+      opacity: 0;
+      transform: scale(1.02);
+    }
+
+    .image-hover-wrapper:hover .tee-img {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .drop-tile h3 {
+      color: #ffe486;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .glyph-thread {
+      font-size: 0.95rem;
+      color: #9df2ff;
+      margin-bottom: 1rem;
+    }
+
+    .drop-tile a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #7766ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .drop-tile a:hover {
+      background-color: #9df2ff;
+      color: #000;
+    }
   </style>
 </head>
 <body>
@@ -101,8 +193,7 @@
     <p class="drop-subtitle">This artifact pulses brighter than most. It will remain in spotlight for 6 more days.</p>
     <div class="countdown" id="countdown">Next breach in: calculating...</div>
   </section>
-
-    <section class="drop-grid">
+  <section class="drop-grid">
     <div class="drop-tile">
       <div class="image-hover-wrapper">
         <img src="assets/images/portal/moonday_design.png" alt="Moon Day Glyph" class="design-img" />
@@ -113,8 +204,7 @@
       <a href="shop.html#vault-002m">Unseal Vault</a>
     </div>
   </section>
-
-    <section style="text-align:center; margin:3rem auto;">
+  <section style="text-align:center; margin:3rem auto;">
     <p style="color:#ccc; font-size:1rem;">
       Looking for past transmissions? Explore the full archive below.
     </p>
@@ -142,11 +232,10 @@
   </footer>
 
   <script>
-    // Countdown Logic — resets weekly unless overridden
+    // Countdown Logic — Moon Day override or regular weekly rotation
     const countdownElement = document.getElementById("countdown");
     const isMoonDay = true;
 
-    // Define next drop
     const nextDrop = isMoonDay 
       ? new Date("2025-07-27T00:00:00") 
       : (() => {
@@ -173,7 +262,7 @@
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      countdownElement.textContent =
+      countdownElement.textContent = 
         `Next breach in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
