@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alchemise Innovation • Hub Gateway</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
 </head>
 <body>
 
@@ -21,7 +20,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">
+  <section id="hero" style="position: relative;">
     <img src="assets/images/hero-banner-alchemise-v1.png" alt="Alchemise Innovation Hero Banner" class="hero-banner" />
     <div class="hero-overlay" id="heroOverlay">
       <h2>Welcome to the Multiverse</h2>
@@ -31,9 +30,7 @@
       </div>
     </div>
   </section>
-
-
-    <!-- Quick Access Panels -->
+  <!-- Quick Access Panels -->
   <section id="quick-panels">
     <div class="panel fade-up" id="shop" data-sigil="shop">
       <img src="/assets/images/sigil-shop.png" alt="Shop Sigil" class="sigil-icon" />
@@ -108,7 +105,7 @@
     </div>
   </footer>
 
-  <!-- Styles -->
+  <!-- Enhanced Styles -->
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -134,6 +131,28 @@
       animation: fadeIn 0.8s ease forwards;
     }
 
+    .hero-overlay {
+      position: absolute;
+      top: 100%; /* Push down by full height of banner */
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 80%;
+      padding: 2rem;
+      background: rgba(10, 10, 10, 0.65);
+      backdrop-filter: blur(6px);
+      border-radius: 14px;
+      text-align: center;
+      color: #fff;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      animation: fadeInOverlay 1s ease forwards;
+    }
+
+    @keyframes fadeInOverlay {
+      from { opacity: 0; transform: translateY(30px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
     .cta-button {
       position: relative;
       display: inline-block;
@@ -154,11 +173,11 @@
       left: -30%;
       width: 160%;
       height: 160%;
-      pointer-events: none;
       background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
-      transition: opacity 0.4s ease;
-      opacity: 0;
       border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
     }
 
     .cta-button:hover {
@@ -188,14 +207,14 @@
     .cta-container { text-align: center; margin-top: 1.5rem; }
   </style>
 
-  <!-- JavaScript -->
+  <!-- Interaction Scripts -->
   <script>
-    // Fade out overlay
+    // Fade overlay trigger
     function fadeOverlay() {
       document.getElementById('heroOverlay').classList.add('fade-out');
     }
 
-    // Magnetic Hover Effect
+    // Magnetic hover effect
     document.querySelectorAll('.cta-button').forEach(button => {
       button.addEventListener('mousemove', e => {
         const rect = button.getBoundingClientRect();
