@@ -117,28 +117,37 @@ nav a:hover {
 }
 
 /* QUICK ACCESS PANELS */
+
 #quick-panels {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background-color: #1a1a2f;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .panel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  width: 260px;
-  height: 520px;
-  background-color: #222;
-  padding: 30px 20px;
-  border-radius: 16px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 440px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
 }
+
+.panel-content {
+  flex-grow: 1;
+}
+
+.button-wrap,
+.market-buttons {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+
+
+
 
 .panel:hover {
   transform: scale(1.05);
