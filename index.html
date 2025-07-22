@@ -86,169 +86,205 @@
   <p>Coming soon: Middle Earth Mayhem, Fantasy Football Draft, Speculative Tees</p>
 </section>
 
+<!-- Latest Rift Drop -->
+<section id="latest-rift" style="text-align:center; padding:3rem 1rem; background-color:#111; border-top:2px solid #444; border-bottom:2px solid #444;">
+  <h2 style="color:#ffe486; font-size:1.6rem; animation: fadeIn 1s ease;">🌀 Latest Rift Drop</h2>
+  <p style="color:#ccc; font-size:1rem; max-width:600px; margin:0.5rem auto;">
+    A breach in the vault grid has released new transmissions. Four glyphs stitched in harmonic drift now await decoding.
+  </p>
+  <a href="portal.html" class="cta-button market-main" style="margin-top:1.2rem;">Enter the Breach</a>
+</section>
 
+<!-- Lore Section -->
+<section id="lore-section">
+  <h2>Design Philosophy</h2>
+  <p>We blend storytelling, speculative design, and wearable tech to create merch that’s more than just fabric—it’s a narrative.</p>
+</section>
 
-  <!-- Latest Rift Drop -->
-  <section id="latest-rift" style="text-align:center; padding:3rem 1rem; background-color:#111; border-top:2px solid #444; border-bottom:2px solid #444;">
-    <h2 style="color:#ffe486; font-size:1.6rem; animation: fadeIn 1s ease;">🌀 Latest Rift Drop</h2>
-    <p style="color:#ccc; font-size:1rem; max-width:600px; margin:0.5rem auto;">
-      A breach in the vault grid has released new transmissions. Four glyphs stitched in harmonic drift now await decoding.
+<!-- Footer -->
+<footer>
+  <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
+    <p style="color:#888; font-size:0.95rem;">
+      🧶 Lore threads stitched with meaning · 
+      <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
+      <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
+      <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
     </p>
-    <a href="portal.html" class="cta-button market-main" style="margin-top:1.2rem;">Enter the Breach</a>
-  </section>
+    <br>
+    <p>&copy; 2025 Alchemise Innovation. Explore responsibly across the multiverse.</p>
+  </div>
+</footer>
 
-  <!-- Lore Section -->
-  <section id="lore-section">
-    <h2>Design Philosophy</h2>
-    <p>We blend storytelling, speculative design, and wearable tech to create merch that’s more than just fabric—it’s a narrative.</p>
-  </section>
+<!-- Embedded Styles -->
+<style>
+  /* Keyframes */
+  @keyframes fadeInOverlay {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
 
-  <!-- Footer -->
-  <footer>
-    <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
-      <p style="color:#888; font-size:0.95rem;">
-        🧶 Lore threads stitched with meaning · 
-        <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
-        <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
-        <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
-      </p>
-      <br>
-      <p>&copy; 2025 Alchemise Innovation. Explore responsibly across the multiverse.</p>
-    </div>
-  </footer>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-  <!-- Embedded Styles -->
-  <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+    50% { box-shadow: 0 0 30px rgba(255,255,255,0.4); }
+  }
 
-    @keyframes fadeInOverlay {
-      from { opacity: 0; transform: translateY(30px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
+  @keyframes flicker {
+    0%, 100% { opacity: 0.95; }
+    50% { opacity: 1; }
+    25%, 75% { opacity: 0.7; }
+  }
 
-    @keyframes flicker {
-      0%, 100% { opacity: 0.95; }
-      50% { opacity: 1; }
-      25%, 75% { opacity: 0.7; }
-    }
+  @keyframes ripple {
+    0% { width: 0; height: 0; opacity: 0.4; }
+    100% { width: 300%; height: 300%; opacity: 0; }
+  }
 
-    .hero-overlay {
-      position: absolute;
-      top: 60%;
-      left: 10%;
-      transform: translateX(-50%);
-      width: 80%;
-      padding: 2rem;
-      background: rgba(10, 10, 10, 0.65);
-      backdrop-filter: blur(6px);
-      border-radius: 14px;
-      text-align: center;
-      color: #fff;
-      z-index: 2;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-      animation: fadeInOverlay 1s ease forwards;
-    }
+  /* Hero Overlay */
+  .hero-overlay {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.65);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    animation: fadeInOverlay 1s ease forwards, pulseGlow 4s ease-in-out infinite;
+  }
 
-    .cta-button {
-      position: relative;
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px #000;
-      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-    }
+  /* Panels */
+  .panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    animation: fadeUp 0.8s ease forwards;
+  }
 
-    .cta-button::after {
-      content: '';
-      position: absolute;
-      top: -30%;
-      left: -30%;
-      width: 160%;
-      height: 160%;
-      background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
-      border-radius: 50%;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
+  .panel-content {
+    flex-grow: 1;
+  }
 
-    .cta-button:hover {
-      transform: scale(1.05);
-      animation: flicker 0.6s infinite;
-    }
+  .button-wrap,
+  .market-buttons {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 1rem;
+  }
 
-    .cta-button:hover::after {
-      opacity: 1;
-    }
+  /* CTA Buttons */
+  .cta-button {
+    position: relative;
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #000;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
 
-    .market-shop { background-color: #00c4cc; }
-    .market-shop:hover { background-color: #00a3aa; box-shadow: 0 0 14px #00f4ff; }
+  .cta-button::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
 
-    .market-create { background-color: #ffce3b; color: #111; }
-    .market-create:hover { background-color: #ffc000; box-shadow: 0 0 14px #ffe97a; }
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0; height: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
 
-    .market-main { background-color: #7766ff; }
-    .market-main:hover { background-color: #5a4de0; box-shadow: 0 0 14px #aab1ff; }
+  .cta-button:hover {
+    transform: scale(1.05);
+    animation: flicker 0.6s infinite;
+  }
 
-    .market-bargain { background-color: #ff5c5c; }
-    .market-bargain:hover { background-color: #e04242; box-shadow: 0 0 14px #ff9a9a; }
+  .cta-button:hover::after {
+    opacity: 1;
+  }
 
-    .market-etsy { background-color: #d19fff; }
-    .market-etsy:hover { background-color: #b87be0; box-shadow: 0 0 14px #eac3ff; }
+  .cta-button:hover::before {
+    animation: ripple 0.6s ease forwards;
+  }
 
-    .cta-container { text-align: center; margin-top: 1.5rem; }
+  /* Sigil Hover Animation */
+  .sigil-icon:hover {
+    transform: translateY(-6px) scale(1.05);
+    transition: transform 0.3s ease;
+  }
 
-    .panel {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      padding: 2rem;
-      background-color: #1a1a1a;
-      border-radius: 12px;
-    }
+  /* Theme Styles */
+  .market-shop { background-color: #00c4cc; }
+  .market-shop:hover { background-color: #00a3aa; box-shadow: 0 0 14px #00f4ff; }
 
-    .panel-content {
-      flex-grow: 1;
-    }
+  .market-create { background-color: #ffce3b; color: #111; }
+  .market-create:hover { background-color: #ffc000; box-shadow: 0 0 14px #ffe97a; }
 
-    .button-wrap,
-    .market-buttons {
-      margin-top: auto;
-      text-align: center;
-      padding-top: 1rem;
-    }
-  </style>
+  .market-main { background-color: #7766ff; }
+  .market-main:hover { background-color: #5a4de0; box-shadow: 0 0 14px #aab1ff; }
 
-  <!-- JS for Overlay & Magnetic Buttons -->
-  <script>
-    function fadeOverlay() {
-      document.getElementById('heroOverlay').classList.add('fade-out');
-    }
+  .market-bargain { background-color: #ff5c5c; }
+  .market-bargain:hover { background-color: #e04242; box-shadow: 0 0 14px #ff9a9a; }
 
-    document.querySelectorAll('.cta-button').forEach(button => {
-      button.addEventListener('mousemove', e => {
-        const rect = button.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const moveX = (x - rect.width / 2) * 0.05;
-        const moveY = (y - rect.height / 2) * 0.05;
-        button.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
-      });
+  .market-etsy { background-color: #d19fff; }
+  .market-etsy:hover { background-color: #b87be0; box-shadow: 0 0 14px #eac3ff; }
 
-      button.addEventListener('mouseleave', () => {
-        button.style.transform = 'translate(0, 0) scale(1)';
-      });
+  .cta-container { text-align: center; margin-top: 1.5rem; }
+</style>
+
+<!-- JS for Overlay & Magnetic Buttons -->
+<script>
+  function fadeOverlay() {
+    document.getElementById('heroOverlay').classList.add('fade-out');
+  }
+
+  document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('mousemove', e => {
+      const rect = button.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const moveX = (x - rect.width / 2) * 0.05;
+      const moveY = (y - rect.height / 2) * 0.05;
+      button.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
     });
-  </script>
 
-  <script src="script/create.js"></script>
+    button.addEventListener('mouseleave', () => {
+      button.style.transform = 'translate(0, 0) scale(1)';
+    });
+  });
+</script>
+
+<script src="script/create.js"></script>
 </body>
 </html>
+
