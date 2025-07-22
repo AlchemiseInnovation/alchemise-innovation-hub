@@ -25,14 +25,13 @@
     <div class="hero-overlay" id="heroOverlay">
       <h2>Welcome to the Multiverse</h2>
       <p>Your gateway to immersive merch and speculative design</p>
-     <center> </center> <a href="#quick-panels" class="cta-button" onclick="fadeOverlay()">Explore the Hub</a> </center>
+      <div class="cta-container">
+        <a href="#quick-panels" class="cta-button" onclick="fadeOverlay()">Explore the Hub</a>
+      </div>
     </div>
   </section>
-
   <!-- Quick Access Panels -->
   <section id="quick-panels">
-
-    <!-- Shop Collections -->
     <div class="panel" id="shop">
       <img src="/assets/images/sigil-shop.png" alt="Shop Sigil" class="sigil-icon" />
       <h3>Shop Collections</h3>
@@ -42,7 +41,6 @@
       </div>
     </div>
 
-    <!-- Create Your Own -->
     <div class="panel" id="create">
       <img src="/assets/images/sigil-create.png" alt="Create Sigil" class="sigil-icon" />
       <h3>Create Your Own</h3>
@@ -52,7 +50,6 @@
       </div>
     </div>
 
-    <!-- External Markets -->
     <div class="panel" id="external">
       <img src="assets/images/sigil-markets.png" alt="External Markets Sigil" class="sigil-icon" />
       <h3>External Markets</h3>
@@ -64,7 +61,6 @@
       </div>
     </div>
 
-    <!-- Lore & Philosophy -->
     <div class="panel" id="lore">
       <img src="/assets/images/sigil-lore.png" alt="Lore Sigil" class="sigil-icon" />
       <h3>Lore & Philosophy</h3>
@@ -73,74 +69,77 @@
         <a href="lore.html" class="cta-button market-create">Explore the Lore</a>
       </div>
     </div>
-
   </section>
 
-  <!-- Featured Carousel (Placeholder) -->
   <section id="carousel">
     <h2>Featured Designs</h2>
     <p>Coming soon: Middle Earth Mayhem, Fantasy Football Draft, Speculative Tees</p>
   </section>
-  
-<section id="latest-rift" style="text-align:center; padding:3rem 1rem; background-color:#111; border-top:2px solid #444; border-bottom:2px solid #444;">
-  <h2 style="color:#ffe486; font-size:1.6rem; animation: fadeIn 1s ease;">🌀 Latest Rift Drop</h2>
-  <p style="color:#ccc; font-size:1rem; max-width:600px; margin:0.5rem auto;">
-    A breach in the vault grid has released new transmissions. Four glyphs stitched in harmonic drift now await decoding.
-  </p>
-  <a href="portal.html" style="
-    display:inline-block;
-    margin-top:1.2rem;
-    padding:0.8rem 1.4rem;
-    background-color:#7766ff;
-    color:white;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow: 0 0 10px #000;
-    transition: background 0.3s ease;
-  ">Enter the Breach</a>
-</section>
 
-<style>
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-
-  .cta-button {
-  display: block;
-  text-align: center;
-}
-
-</style>
-
-  <!-- Lore Section -->
+  <section id="latest-rift" style="text-align:center; padding:3rem 1rem; background-color:#111; border-top:2px solid #444; border-bottom:2px solid #444;">
+    <h2 style="color:#ffe486; font-size:1.6rem; animation: fadeIn 1s ease;">🌀 Latest Rift Drop</h2>
+    <p style="color:#ccc; font-size:1rem; max-width:600px; margin:0.5rem auto;">
+      A breach in the vault grid has released new transmissions. Four glyphs stitched in harmonic drift now await decoding.
+    </p>
+    <a href="portal.html" style="
+      display:inline-block;
+      margin-top:1.2rem;
+      padding:0.8rem 1.4rem;
+      background-color:#7766ff;
+      color:white;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow: 0 0 10px #000;
+      transition: background 0.3s ease;
+    ">Enter the Breach</a>
+  </section>
   <section id="lore-section">
     <h2>Design Philosophy</h2>
     <p>We blend storytelling, speculative design, and wearable tech to create merch that’s more than just fabric—it’s a narrative.</p>
   </section>
 
-  <!-- Footer -->
-  
   <footer>
-    
+    <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
+      <p style="color:#888; font-size:0.95rem;">
+        🧶 Lore threads stitched with meaning · 
+        <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
+        <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
+        <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
+      </p>
+      <br>
+      <p>&copy; 2025 Alchemise Innovation. Explore responsibly across the multiverse.</p>
+    </div>
+  </footer>
 
-  <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
-    <p style="color:#888; font-size:0.95rem;">
-      🧶 Lore threads stitched with meaning · 
-      <a href="about.html" style="color:#9df2ff; text-decoration:none;">Origin Scroll</a> · 
-      <a href="contact.html" style="color:#9df2ff; text-decoration:none;">Dispatch Node</a> · 
-      <a href="privacy.html" style="color:#9df2ff; text-decoration:none;">Privacy Glyph</a>
-    </p>
-    <BR>
-    <p>&copy; 2025 Alchemise Innovation. Explore responsibly across the multiverse.</p>
-    
-  </div>
-</footer>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
+    .cta-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
 
-  
+    .cta-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #7766ff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #000;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #5a4de0;
+    }
+  </style>
+
   <!-- JavaScript -->
   <script>
     function fadeOverlay() {
@@ -151,3 +150,4 @@
 
 </body>
 </html>
+
