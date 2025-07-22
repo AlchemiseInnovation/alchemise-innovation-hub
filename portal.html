@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/style.css" />
 
   <style>
+    /* Body & Header */
     body {
       background-color: #0d0d0d;
       font-family: 'Segoe UI', sans-serif;
@@ -39,6 +40,7 @@
       color: #fdf897;
     }
 
+    /* Hero Section */
     .portal-hero {
       text-align: center;
       padding: 3rem 1rem;
@@ -81,117 +83,8 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
-    .drop-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .drop-tile {
-      background-color: #1a1a1a;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #000;
-      padding: 1rem;
-      text-align: center;
-      animation: floatIn 0.8s ease forwards;
-    }
-
-    @keyframes floatIn {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .drop-tile img {
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 0 10px #333;
-      margin-bottom: 1rem;
-    }
-
-    .drop-tile h3 {
-      color: #ffe486;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .glyph-thread {
-      font-size: 0.95rem;
-      color: #9df2ff;
-      margin-bottom: 1rem;
-    }
-
-    .drop-tile a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #7766ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .drop-tile a:hover {
-      background-color: #9df2ff;
-      color: #000;
-    }
-
-.image-hover-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #333;
-  margin-bottom: 1rem;
-}
-
-.design-img,
-.tee-img {
-  width: 100%;
-  display: block;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 6px;
-}
-
-.design-img {
-  opacity: 1;
-  z-index: 2;
-}
-
-.tee-img {
-  opacity: 0;
-  z-index: 1;
-}
-
-.image-hover-wrapper:hover .design-img {
-  opacity: 0;
-  transform: scale(1.02);
-}
-
-.image-hover-wrapper:hover .tee-img {
-  opacity: 1;
-  transform: scale(1);
-}
-
-
-    
   </style>
 </head>
-
 <body>
   <header>
     <h1>🌀 Portal Breach</h1>
@@ -209,22 +102,19 @@
     <div class="countdown" id="countdown">Next breach in: calculating...</div>
   </section>
 
-  <section class="drop-grid">
-
- <div class="drop-tile">
-  <div class="image-hover-wrapper">
-    <img src="assets/images/portal/moonday_design.png" alt="Moon Day Glyph" class="design-img" />
-    <img src="assets/images/portal/moonday_tee.png" alt="Moon Day Tee" class="tee-img" />
-  </div>
-  <h3>Transmission 002-M</h3>
-  <p class="glyph-thread">Decoded during Moon Phase IX • Harmonic glyph stitched in lunar drift</p>
-  <a href="shop.html#vault-002m">Unseal Vault</a>
-</div>
-
-
+    <section class="drop-grid">
+    <div class="drop-tile">
+      <div class="image-hover-wrapper">
+        <img src="assets/images/portal/moonday_design.png" alt="Moon Day Glyph" class="design-img" />
+        <img src="assets/images/portal/moonday_tee.png" alt="Moon Day Tee" class="tee-img" />
+      </div>
+      <h3>Transmission 002-M</h3>
+      <p class="glyph-thread">Decoded during Moon Phase IX • Harmonic glyph stitched in lunar drift</p>
+      <a href="shop.html#vault-002m">Unseal Vault</a>
+    </div>
   </section>
 
-  <section style="text-align:center; margin:3rem auto;">
+    <section style="text-align:center; margin:3rem auto;">
     <p style="color:#ccc; font-size:1rem;">
       Looking for past transmissions? Explore the full archive below.
     </p>
@@ -239,6 +129,7 @@
       font-weight:bold;
     ">View Archived Drops</a>
   </section>
+
   <footer>
     <div style="text-align:center; padding:2rem 1rem; background-color:#111; border-top:1px solid #333;">
       <p style="color:#888; font-size:0.95rem;">
@@ -253,22 +144,20 @@
   <script>
     // Countdown Logic — resets weekly unless overridden
     const countdownElement = document.getElementById("countdown");
+    const isMoonDay = true;
 
-    // Override for special event — example: Moon Day
-    const isMoonDay = true; // set to false for regular weekly rotation
-
-    // Next drop date (Sunday at midnight or specific lore event)
+    // Define next drop
     const nextDrop = isMoonDay 
-      ? new Date("2025-07-27T00:00:00") // Moon Day override
-      : new Date(); // Default: next Sunday midnight
-
-    if (!isMoonDay) {
-      const today = new Date();
-      const day = today.getDay();
-      const daysUntilSunday = (7 - day) % 7;
-      nextDrop.setDate(today.getDate() + daysUntilSunday);
-      nextDrop.setHours(0, 0, 0, 0);
-    }
+      ? new Date("2025-07-27T00:00:00") 
+      : (() => {
+          const now = new Date();
+          const day = now.getDay();
+          const daysUntilSunday = (7 - day) % 7 || 7;
+          const date = new Date();
+          date.setDate(now.getDate() + daysUntilSunday);
+          date.setHours(0, 0, 0, 0);
+          return date;
+        })();
 
     function updateCountdown() {
       const now = new Date();
@@ -292,5 +181,3 @@
   </script>
 </body>
 </html>
-
-  
