@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Embed Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #111;
+      color: #eee;
+    }
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+    }
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    iframe, video {
+      max-width: 100%;
+      width: 560px;
+      height: 315px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 Video Embed Showcase</h1>
+  <div class="video-container">
+    <!-- YouTube Embed -->
+    <iframe 
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+      title="YouTube video player" 
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <!-- Local Video Embed (Place your file in the 'videos' folder) -->
+    <video controls>
+      <source src="videos/sample.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+</html>
