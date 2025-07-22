@@ -131,22 +131,27 @@
       animation: fadeIn 0.8s ease forwards;
     }
 
-    .hero-overlay {
-      position: absolute;
-      top: 100%; /* Push down by full height of banner */
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 80%;
-      padding: 2rem;
-      background: rgba(10, 10, 10, 0.65);
-      backdrop-filter: blur(6px);
-      border-radius: 14px;
-      text-align: center;
-      color: #fff;
-      z-index: 2;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-      animation: fadeInOverlay 1s ease forwards;
-    }
+   
+
+.hero-overlay {
+  position: absolute;
+  top: 60%; /* Adjust this to raise/lower */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 2rem;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  animation: fadeInOverlay 1s ease forwards;
+}
+
+
+    
 
     @keyframes fadeInOverlay {
       from { opacity: 0; transform: translateY(30px) scale(0.95); }
