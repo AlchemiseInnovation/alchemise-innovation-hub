@@ -319,3 +319,17 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.ring-portal {
+  background-color: #e6d6b8;
+  color: #2c1f0b;
+  font-family: 'Cinzel', serif; /* Optional: add a fantasy font */
+  border: 2px solid #a88c5f;
+  box-shadow: 0 0 12px #a88c5f;
+}
+
+.ring-portal:hover {
+  background-color: #d4c2a3;
+  box-shadow: 0 0 18px #c2a76e;
+}
+
