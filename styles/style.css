@@ -242,6 +242,27 @@ nav a:hover {
   background-color: #ffe1e9;
   box-shadow: 0 0 15px #ffb6c1;
 }
+/* Emporium Button */
+.emporium-button {
+  background-color: #9df2ff;
+  color: #000;
+}
+
+.emporium-button:hover {
+  background-color: #c1f3ff;
+}
+
+/* Halloween Button */
+.halloween-button {
+  background-color: #ff6347; /* tomato red */
+  color: #fff;
+  box-shadow: 0 0 10px #ff4500;
+}
+
+.halloween-button:hover {
+  background-color: #ff4500;
+  box-shadow: 0 0 15px #ff6347;
+}
 
 /* CAROUSEL & LORE SECTIONS */
 #carousel,
