@@ -65,7 +65,7 @@ nav a:hover {
   width: 50%;
   height: auto;
   display: block;
-  margin: 0 auto; /* This centers the image horizontally */
+  margin: 0 auto;
 }
 
 .hero-overlay {
@@ -178,7 +178,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  gap: 12px; /* ✅ Added spacing between buttons */
+  gap: 12px;
 }
 
 /* SHOP & CREATE BUTTONS */
@@ -255,7 +255,7 @@ nav a:hover {
 
 /* Halloween Button */
 .halloween-button {
-  background-color: #ff6347; /* tomato red */
+  background-color: #ff6347;
   color: #fff;
   box-shadow: 0 0 10px #ff4500;
 }
@@ -323,7 +323,7 @@ footer {
 .ring-portal {
   background-color: #e6d6b8;
   color: #2c1f0b;
-  font-family: 'Cinzel', serif; /* Optional: add a fantasy font */
+  font-family: 'Cinzel', serif;
   border: 2px solid #a88c5f;
   box-shadow: 0 0 12px #a88c5f;
 }
@@ -333,3 +333,29 @@ footer {
   box-shadow: 0 0 18px #c2a76e;
 }
 
+/* RESPONSIVE HERO IMAGE FIX */
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hero-overlay {
+    width: 90%;
+    padding: 20px;
+    font-size: 1rem;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
