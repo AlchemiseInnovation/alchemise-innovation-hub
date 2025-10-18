@@ -54,15 +54,14 @@ nav a:hover {
   color: #fdf897;
 }
 
-/* HERO SECTION FIX */
-/* HERO SECTION RESTORE + SCROLL FIX */
+/* HERO SECTION — responsive and balanced */
 #hero {
   position: relative;
   width: 100%;
-  overflow: auto; /* allows scrolling if overlay extends below image */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  overflow: hidden;
 }
 
+/* Banner image */
 .hero-banner {
   width: 100%;
   height: auto;
@@ -70,6 +69,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
+/* Overlay for desktop */
 .hero-overlay {
   position: absolute;
   top: 50%;
@@ -82,21 +82,33 @@ nav a:hover {
   border-radius: 12px;
   z-index: 5;
   transition: opacity 0.6s ease, visibility 0.6s ease;
+  max-width: 90%;
 }
 
-/* Mobile adjustment */
+/* ========================================
+   MOBILE FIX — scrollable overlay version
+   ======================================== */
 @media screen and (max-width: 768px) {
   #hero {
-    overflow-y: auto; /* enable vertical scroll on phones */
-    max-height: 100vh; /* constrain within screen height */
+    overflow-y: auto;       /* allow scrolling if needed */
+    max-height: 100vh;      /* fit screen height */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero-banner {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 90%;
     padding: 20px;
     font-size: 1rem;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .hero-overlay h2 {
@@ -105,6 +117,7 @@ nav a:hover {
 
   .hero-overlay p {
     font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .cta-button {
@@ -113,6 +126,35 @@ nav a:hover {
     padding: 10px 20px;
   }
 }
+
+/* ========================================
+   DESKTOP FIX — center overlay & scale image
+   ======================================== */
+@media screen and (min-width: 769px) {
+  #hero {
+    overflow: hidden;
+  }
+
+  .hero-banner {
+    width: 80%;     /* smaller than full width for nicer balance */
+    height: auto;
+  }
+
+  .hero-overlay {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1.2rem;
+  }
+}
+
 
 .cta-button {
   display: inline-block;
