@@ -58,60 +58,63 @@ nav a:hover {
 #hero {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;
 }
 
 .hero-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-overlay {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  z-index: 5;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.hero-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .hero-overlay h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .hero-overlay p {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
+/* CTA BUTTONS */
 .cta-button {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
   padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  background-color: #9df2ff;
-  color: #000;
-  box-shadow: 0 0 10px #9df2ff;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.cta-button:hover {
-  background-color: #c1f3ff;
-  box-shadow: 0 0 15px #9df2ff;
+.cta-button:focus {
+  outline: 2px solid #fdf897;
+  outline-offset: 3px;
 }
 
 /* QUICK ACCESS PANELS */
@@ -331,27 +334,21 @@ footer {
   box-shadow: 0 0 18px #c2a76e;
 }
 
-/* RESPONSIVE HERO IMAGE + OVERLAY FIX */
+/* RESPONSIVE HERO IMAGE FIX */
 @media screen and (max-width: 768px) {
   .hero-banner {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 1rem;
   }
 
   .hero-overlay {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
     width: 90%;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 12px;
-    text-align: center;
-    z-index: 2;
+    padding: 20px;
+    font-size: 1rem;
+    top: 60%;
+    transform: translate(-50%, -50%);
   }
 
   .hero-overlay h2 {
@@ -363,9 +360,40 @@ footer {
   }
 
   .cta-button {
+    max-width: 100%;
     font-size: 1rem;
     padding: 10px 20px;
-    max-width: 200px;
-    margin: 1rem auto 0 auto;
+  }
+
+  .panel {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.95rem;
+  }
+
+  .sigil-icon {
+    width: 140px;
+  }
+
+  #carousel h2,
+  #lore-section h2 {
+    font-size: 1.6rem;
+  }
+
+  #carousel p,
+  #lore-section p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 15px;
   }
 }
