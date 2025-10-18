@@ -335,7 +335,7 @@ footer {
 @media screen and (max-width: 768px) {
   .hero-overlay {
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 90%;
