@@ -13,6 +13,33 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes flicker {
+  0%   { opacity: 0.2; text-shadow: 0 0 2px #fff; }
+  5%   { opacity: 1; text-shadow: 0 0 6px #9df2ff; }
+  10%  { opacity: 0.4; text-shadow: 0 0 3px #fff; }
+  15%  { opacity: 1; text-shadow: 0 0 8px #fdf897; }
+  20%  { opacity: 0.3; text-shadow: 0 0 2px #fff; }
+  25%  { opacity: 1; text-shadow: 0 0 6px #9df2ff; }
+  30%  { opacity: 0.5; text-shadow: 0 0 4px #fff; }
+  35%  { opacity: 1; text-shadow: 0 0 10px #fdf897; }
+  40%  { opacity: 0.2; text-shadow: 0 0 2px #fff; }
+  45%  { opacity: 1; text-shadow: 0 0 6px #9df2ff; }
+  50%  { opacity: 0.4; text-shadow: 0 0 3px #fff; }
+  55%  { opacity: 1; text-shadow: 0 0 8px #fdf897; }
+  60%  { opacity: 0.3; text-shadow: 0 0 2px #fff; }
+  65%  { opacity: 1; text-shadow: 0 0 6px #9df2ff; }
+  70%  { opacity: 0.5; text-shadow: 0 0 4px #fff; }
+  75%  { opacity: 1; text-shadow: 0 0 10px #fdf897; }
+  80%  { opacity: 0.2; text-shadow: 0 0 2px #fff; }
+  85%  { opacity: 1; text-shadow: 0 0 6px #9df2ff; }
+  90%  { opacity: 0.4; text-shadow: 0 0 3px #fff; }
+  95%  { opacity: 1; text-shadow: 0 0 8px #fdf897; }
+  100% { opacity: 1; text-shadow: 0 0 12px #fff; }
+}
+
+
+
+
 /* HEADER */
 header {
   background-color: #111;
@@ -146,13 +173,23 @@ nav a:hover {
     padding: 40px;
   }
 
-  .hero-overlay h2 {
-    font-size: 2.5rem;
-  }
+ 
+.hero-overlay h2 {
+  font-size: 2.5rem;
+  animation: flicker 2.5s ease-in-out forwards;
+}
 
-  .hero-overlay p {
-    font-size: 1.2rem;
-  }
+.hero-overlay p,
+.cta-button {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 }
 
 
