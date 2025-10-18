@@ -55,14 +55,16 @@ nav a:hover {
 }
 
 /* HERO SECTION FIX */
+/* HERO SECTION FIX (MOBILE-SAFE) */
 #hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* Make the hero fill the full viewport height */
+  min-height: 100vh; /* allow the section to expand if overlay is taller */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px; /* adds breathing room on mobile */
 }
 
 .hero-banner {
@@ -71,12 +73,12 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the hero area */
+  object-fit: cover;
   z-index: 1;
 }
 
 .hero-overlay {
-  position: relative; /* Now sits centered via flexbox from #hero */
+  position: relative;
   z-index: 2;
   text-align: center;
   color: #fff;
@@ -84,23 +86,15 @@ nav a:hover {
   padding: 40px;
   border-radius: 12px;
   max-width: 90%;
+  box-sizing: border-box;
 }
 
-.hero-overlay h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* Responsive Hero */
+/* Adjust hero overlay for smaller screens */
 @media screen and (max-width: 768px) {
   #hero {
-    height: 100vh; /* Still full screen on mobile */
-    padding: 20px;
+    align-items: flex-start; /* move overlay slightly higher */
+    padding-top: 15vh; /* ensure it’s not flush to the top */
+    min-height: auto; /* allow it to grow with content */
   }
 
   .hero-overlay {
@@ -110,13 +104,20 @@ nav a:hover {
   }
 
   .hero-overlay h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .hero-overlay p {
     font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
+
 
 
 /* CTA BUTTONS */
