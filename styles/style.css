@@ -55,16 +55,15 @@ nav a:hover {
 }
 
 /* HERO SECTION FIX */
-/* HERO SECTION FIX (MOBILE-SAFE) */
+/* HERO SECTION — RESPONSIVE FIX */
 #hero {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* allow the section to expand if overlay is taller */
+  min-height: 100vh; /* full screen or taller if needed */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* adds breathing room on mobile */
 }
 
 .hero-banner {
@@ -86,21 +85,52 @@ nav a:hover {
   padding: 40px;
   border-radius: 12px;
   max-width: 90%;
-  box-sizing: border-box;
+  margin: 1rem;
 }
 
-/* Adjust hero overlay for smaller screens */
+/* Make sure the overlay content doesn't overflow small screens */
+.hero-overlay h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #9df2ff;
+  color: #000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c1f3ff;
+}
+
+/* MOBILE FIX */
 @media screen and (max-width: 768px) {
   #hero {
-    align-items: flex-start; /* move overlay slightly higher */
-    padding-top: 15vh; /* ensure it’s not flush to the top */
-    min-height: auto; /* allow it to grow with content */
+    min-height: auto;
+    height: auto;
+    padding: 60px 0; /* give breathing room for button */
+  }
+
+  .hero-banner {
+    height: 100%;
+    object-fit: cover;
   }
 
   .hero-overlay {
+    width: 90%;
     padding: 20px;
     font-size: 1rem;
-    max-width: 95%;
   }
 
   .hero-overlay h2 {
@@ -109,10 +139,10 @@ nav a:hover {
 
   .hero-overlay p {
     font-size: 1rem;
-    margin-bottom: 15px;
   }
 
   .cta-button {
+    width: 100%;
     font-size: 1rem;
     padding: 10px 20px;
   }
