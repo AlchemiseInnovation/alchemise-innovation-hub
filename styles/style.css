@@ -37,6 +37,17 @@ body {
   100% { opacity: 1; text-shadow: 0 0 12px #fff; }
 }
 
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px #9df2ff, 0 0 10px #9df2ff;
+  }
+  50% {
+    box-shadow: 0 0 15px #fdf897, 0 0 25px #fdf897;
+  }
+  100% {
+    box-shadow: 0 0 5px #9df2ff, 0 0 10px #9df2ff;
+  }
+}
 
 
 
@@ -140,17 +151,26 @@ nav a:hover {
 
   .hero-overlay h2 {
     font-size: 1.8rem;
+
+  animation: flicker 2.5s ease-in-out forwards, pulseGlow 3s infinite ease-in-out 2.5s;
+
+
+
   }
 
   .hero-overlay p {
     font-size: 1rem;
     margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out 2.5s forwards;
   }
 
   .cta-button {
     max-width: 100%;
     font-size: 1rem;
     padding: 10px 20px;
+
+animation: pulseGlow 2.5s infinite ease-in-out;
+    
   }
 }
 
@@ -176,7 +196,8 @@ nav a:hover {
  
 .hero-overlay h2 {
   font-size: 2.5rem;
-  animation: flicker 2.5s ease-in-out forwards;
+  animation: flicker 2.5s ease-in-out forwards, pulseGlow 3s infinite ease-in-out 2.5s;
+
 }
 
 .hero-overlay p,
@@ -229,6 +250,7 @@ nav a:hover {
 
   .hero-overlay h2 {
     font-size: 1.6rem;
+    animation: flicker 2.5s ease-in-out forwards, pulseGlow 3s infinite ease-in-out 2.5s;
   }
 
   .hero-overlay p {
@@ -299,6 +321,7 @@ nav a:hover {
   width: 180px;
   height: auto;
   transition: transform 0.3s ease;
+  animation: pulseGlow 4s infinite ease-in-out;
 }
 
 .sigil-icon:hover {
