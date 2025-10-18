@@ -222,7 +222,9 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   border-radius: 8px;
   background-color: #9df2ff;
   color: #000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   opacity: 1; /* fallback visibility */
+  visibility: visible;
+  animation: fadeIn 1s ease-in-out 2.5s forwards, pulseGlow 2.5s infinite ease-in-out;
 }
 
 .cta-button:hover {
