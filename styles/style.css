@@ -335,13 +335,6 @@ footer {
 
 /* RESPONSIVE HERO IMAGE + OVERLAY FIX */
 @media screen and (max-width: 768px) {
-  .hero-banner {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 1rem;
-  }
-
   .hero-overlay {
     position: relative;
     top: auto;
@@ -354,11 +347,21 @@ footer {
     border-radius: 12px;
     text-align: center;
     z-index: 2;
+    max-height: none;
   }
 
   .hero-overlay h2 {
     font-size: 1.8rem;
+  }
+
   .hero-overlay p {
     font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    max-width: 200px;
+    margin: 0 auto;
   }
 }
