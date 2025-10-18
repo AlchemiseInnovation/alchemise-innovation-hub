@@ -59,15 +59,15 @@ nav a:hover {
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 2rem;
 }
 
 .hero-banner {
-  max-width: 800px;
-  width: 100%;
-  height: auto;
   display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
   margin: 0 auto;
-  object-fit: contain;
 }
 
 .hero-overlay {
@@ -109,4 +109,144 @@ nav a:hover {
   padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
-  border
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:focus {
+  outline: 2px solid #fdf897;
+  outline-offset: 3px;
+}
+
+/* QUICK ACCESS PANELS */
+#quick-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.panel-content {
+  flex-grow: 1;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.panel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #9df2ff;
+}
+
+.sigil-icon {
+  display: block;
+  margin: 0 auto 10px;
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sigil-icon:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.panel h3 {
+  font-size: 1.4rem;
+  color: #fdf897;
+  margin-bottom: 8px;
+}
+
+.panel p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* BUTTON WRAPPER FOR SINGLE BUTTON PANELS */
+.button-wrap {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 12px;
+}
+}
+
+/* RESPONSIVE HERO IMAGE FIX */
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  .hero-overlay {
+    width: 90%;
+    padding: 20px;
+    font-size: 1rem;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .panel {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.95rem;
+  }
+
+  .sigil-icon {
+    width: 140px;
+  }
+
+  #carousel h2,
+  #lore-section h2 {
+    font-size: 1.6rem;
+  }
+
+  #carousel p,
+  #lore-section p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 15px;
+  }
+}
