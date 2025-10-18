@@ -180,7 +180,6 @@ nav a:hover {
   padding-top: 1rem;
   gap: 12px;
 }
-}
 
 /* SHOP & CREATE BUTTONS */
 .market-shop {
@@ -334,7 +333,7 @@ footer {
   box-shadow: 0 0 18px #c2a76e;
 }
 
-/* RESPONSIVE HERO IMAGE FIX */
+/* RESPONSIVE HERO IMAGE + OVERLAY FIX */
 @media screen and (max-width: 768px) {
   .hero-banner {
     width: 100%;
@@ -349,7 +348,7 @@ footer {
     left: auto;
     transform: none;
     width: 90%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 12px;
@@ -359,8 +358,6 @@ footer {
 
   .hero-overlay h2 {
     font-size: 1.8rem;
-  }
-
   .hero-overlay p {
     font-size: 1rem;
   }
