@@ -268,8 +268,14 @@ animation: pulseGlow 2.5s infinite ease-in-out;
 
 
 /* Universal CTA Button Enhancements */
+
+
 .cta-button {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
   padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
@@ -282,6 +288,7 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   position: relative;
   overflow: hidden;
 }
+
 
 .cta-button::before {
   content: "";
