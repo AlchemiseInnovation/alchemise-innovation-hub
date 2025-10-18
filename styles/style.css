@@ -265,25 +265,53 @@ animation: pulseGlow 2.5s infinite ease-in-out;
 }
 
 
-
-/* CTA BUTTONS */
+/* Universal CTA Button Enhancements */
 .cta-button {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  text-align: center;
+  display: inline-block;
   padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  background-color: #9df2ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+  transition: all 0.3s ease-in-out;
+  animation: pulseGlow 2.5s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-.cta-button:focus {
-  outline: 2px solid #fdf897;
-  outline-offset: 3px;
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
 }
+
+.cta-button:hover {
+  background-color: #fdf897;
+  color: #000;
+  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897;
+  transform: scale(1.05);
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: 125%; }
+}
+
+
+
+
+
+
 
 /* QUICK ACCESS PANELS */
 #quick-panels {
