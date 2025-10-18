@@ -49,6 +49,51 @@ body {
   }
 }
 
+.glitch {
+  position: relative;
+  color: #fff;
+  animation: glitchAnim 1s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #9df2ff;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitchAnim {
+  0% { transform: none; }
+  20% { transform: skew(0.5deg); }
+  40% { transform: skew(-0.5deg); }
+  60% { transform: skew(0.5deg); }
+  80% { transform: skew(-0.5deg); }
+  100% { transform: none; }
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  50% { clip: rect(0, 9999px, 20px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  50% { clip: rect(20px, 9999px, 40px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
 
 
 /* HEADER */
