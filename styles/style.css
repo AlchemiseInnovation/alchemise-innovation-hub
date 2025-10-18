@@ -250,3 +250,27 @@ nav a:hover {
     padding: 20px 15px;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero-overlay {
+    position: static;
+    transform: none;
+    margin: 1rem auto;
+    width: 90%;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .cta-container {
+    margin-top: 1rem;
+  }
+}
