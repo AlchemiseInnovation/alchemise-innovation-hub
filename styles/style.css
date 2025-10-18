@@ -333,12 +333,20 @@ footer {
 
 /* RESPONSIVE HERO IMAGE + OVERLAY FIX */
 @media screen and (max-width: 768px) {
+  .hero-banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
   .hero-overlay {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     width: 90%;
+    margin: 2rem auto;
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 12px;
