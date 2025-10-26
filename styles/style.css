@@ -169,7 +169,7 @@ nav a:hover {
 }
 
 .button-wrap a {
-  height: 48px; /* or whatever height matches your design */
+  height: 55px; /* or whatever height matches your design */
   line-height: 1.2;
   display: flex;
   align-items: center;
