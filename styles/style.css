@@ -235,43 +235,18 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* === EXTERNAL STRAND === */
+/* === External STRAND === */
 .market-etsy {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  min-width: 240px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 12px 24px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
   background-color: #ffb6c1;
   color: #000;
   box-shadow: 0 0 10px #ffb6c1;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
 }
-
 .market-etsy:hover {
   background-color: #ffe1e9;
   box-shadow: 0 0 20px #ffb6c1, 0 0 40px #ffb6c1;
   transform: scale(1.05);
 }
 
-.market-etsy::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-  transform: skewX(-20deg);
-  animation: shimmer 3s infinite;
-}
 
 
 /* === EMPORIUM BUTTON === */
