@@ -1,0 +1,369 @@
+/* === RESET & BASE STYLES === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e0e1c;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === HEADER === */
+header {
+  background-color: #111;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.brand {
+  color: #ffffff;
+}
+
+.hub-label {
+  color: #cccccc;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #9df2ff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fdf897;
+}
+
+/* === HERO SECTION === */
+#hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  z-index: 5;
+  max-width: 90%;
+}
+
+.hero-overlay h2 {
+  font-size: 2.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* === CTA BUTTON === */
+.cta-button {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  min-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #9df2ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #fdf897;
+  box-shadow: 0 0 20px #fdf897;
+  transform: scale(1.05);
+}
+/* === QUICK ACCESS PANELS === */
+#quick-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+}
+
+.panel-content {
+  flex-grow: 1;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.panel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #9df2ff;
+}
+
+.sigil-icon {
+  display: block;
+  margin: 0 auto 10px;
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sigil-icon:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.panel h3 {
+  font-size: 1.4rem;
+  color: #fdf897;
+  margin-bottom: 8px;
+}
+
+.panel p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.button-wrap {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 12px;
+}
+
+/* === STRAND BUTTONS — CLEAN AND CONSISTENT === */
+.market-shop,
+.market-create,
+.halloween-button,
+.market-etsy,
+.emporium-button,
+.cta-button {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  min-width: 240px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* === SHOP STRAND === */
+.market-shop {
+  background-color: #c1f3ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+}
+.market-shop:hover {
+  background-color: #9df2ff;
+  box-shadow: 0 0 20px #9df2ff;
+  transform: scale(1.05);
+}
+
+/* === CREATE STRAND === */
+.market-create {
+  background-color: #fff3b0;
+  color: #000;
+  box-shadow: 0 0 10px #fdf897;
+}
+.market-create:hover {
+  background-color: #fdf897;
+  box-shadow: 0 0 20px #fdf897;
+  transform: scale(1.05);
+}
+
+/* === SEASON STRAND === */
+.halloween-button {
+  background-color: #ff6347;
+  color: #fff;
+  box-shadow: 0 0 10px #ff4500;
+}
+.halloween-button:hover {
+  background-color: #ff4500;
+  box-shadow: 0 0 20px #ff6347;
+  transform: scale(1.05);
+}
+
+/* === EXTERNAL STRAND === */
+.market-etsy {
+  background-color: #ffb6c1;
+  color: #000;
+  box-shadow: 0 0 10px #ffb6c1;
+}
+.market-etsy:hover {
+  background-color: #ffe1e9;
+  box-shadow: 0 0 20px #ffb6c1;
+  transform: scale(1.05);
+}
+
+/* === EMPORIUM BUTTON === */
+.emporium-button {
+  background-color: #9df2ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+}
+.emporium-button:hover {
+  background-color: #c1f3ff;
+  box-shadow: 0 0 20px #9df2ff;
+  transform: scale(1.05);
+}
+/* === CAROUSEL & LORE SECTIONS === */
+#carousel,
+#lore-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #141424;
+  color: #ccc;
+}
+
+#carousel h2,
+#lore-section h2 {
+  font-size: 2.2rem;
+  color: #fdf897;
+  margin-bottom: 10px;
+}
+
+#carousel p,
+#lore-section p {
+  font-size: 1.1rem;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #111;
+  padding: 30px 20px;
+  text-align: center;
+  color: #777;
+  border-top: 2px solid #444;
+  font-size: 0.9rem;
+}
+
+/* === EMPORIUM BANNER === */
+.emporium-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #0e0e1c;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.emporium-banner img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* === RESPONSIVE FIXES === */
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  .hero-overlay {
+    width: 90%;
+    padding: 20px;
+    font-size: 1rem;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .panel {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.95rem;
+  }
+
+  .sigil-icon {
+    width: 140px;
+  }
+
+  #carousel h2,
+  #lore-section h2 {
+    font-size: 1.6rem;
+  }
+
+  #carousel p,
+  #lore-section p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 15px;
+  }
+}
