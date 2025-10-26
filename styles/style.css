@@ -177,6 +177,13 @@ nav a:hover {
   flex-shrink: 0;
 }
 
+.button-wrap {
+  display: grid;
+  grid-auto-rows: 48px;
+  gap: 12px;
+  justify-items: center;
+}
+
 
 /* === STRAND BUTTONS — UNIFIED STYLE === */
 .market-shop,
