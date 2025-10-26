@@ -409,6 +409,7 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   gap: 2rem;
 }
 
+
 .panel {
   display: flex;
   flex-direction: column;
@@ -466,6 +467,22 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   padding-top: 1rem;
   gap: 12px;
 }
+}
+.btn-shop,
+.btn-create,
+.btn-season,
+.btn-external,
+.btn-lore {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* SHOP & CREATE BUTTONS */
@@ -551,6 +568,37 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   background-color: #ff4500;
   box-shadow: 0 0 15px #ff6347;
 }
+
+.btn-lore {
+  background-color: #9df2ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-lore:hover {
+  background-color: #fdf897;
+  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897;
+  transform: scale(1.05);
+}
+.btn-lore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+}
+@keyframes shimmer {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: 125%; }
+}
+
 
 /* CAROUSEL & LORE SECTIONS */
 #carousel,
