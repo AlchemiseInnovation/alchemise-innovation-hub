@@ -116,16 +116,15 @@ nav a:hover {
 }
 /* === QUICK ACCESS PANELS === */
 
-
 #quick-panels {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch; /* Ensures vertical alignment */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  justify-items: center;
   padding: 2rem;
-  text-align: center; /* Ensures inline content is centered */
 }
+
+
 
 .panel {
   flex: 0 1 320px; /* Allows wrapping and sets a base width */
