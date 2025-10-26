@@ -115,21 +115,29 @@ nav a:hover {
   transform: scale(1.05);
 }
 /* === QUICK ACCESS PANELS === */
+
 #quick-panels {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers items in each row */
+  gap: 2rem; /* Optional: adds spacing between panels */
+  padding: 2rem;
 }
 
 .panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 440px;
-  padding: 2rem;
+  flex: 0 1 320px; /* Allows wrapping and sets a base width */
+  max-width: 360px;
   background-color: #1a1a1a;
   border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #222;
+  text-align: center;
 }
+
+
+
+
+
 
 .panel-content {
   flex-grow: 1;
