@@ -116,12 +116,15 @@ nav a:hover {
 }
 /* === QUICK ACCESS PANELS === */
 
+
 #quick-panels {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* This centers items in each row */
-  gap: 2rem; /* Optional: adds spacing between panels */
+  justify-content: center;
+  align-items: stretch; /* Ensures vertical alignment */
+  gap: 2rem;
   padding: 2rem;
+  text-align: center; /* Ensures inline content is centered */
 }
 
 .panel {
