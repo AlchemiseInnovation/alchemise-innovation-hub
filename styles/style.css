@@ -569,19 +569,32 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   box-shadow: 0 0 15px #ff6347;
 }
 
+/* 📜 LORE STRAND — full override for CTA-style buttons */
 .btn-lore {
-  background-color: #9df2ff;
-  color: #000;
-  box-shadow: 0 0 10px #9df2ff;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
+  background-color: #9df2ff !important;
+  color: #000 !important;
+  box-shadow: 0 0 10px #9df2ff !important;
+  border-radius: 8px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 240px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  padding: 12px 24px !important;
+  transition: all 0.3s ease-in-out !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: none !important; /* disables pulseGlow from .cta-button */
 }
+
 .btn-lore:hover {
-  background-color: #fdf897;
-  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897;
-  transform: scale(1.05);
+  background-color: #fdf897 !important;
+  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897 !important;
+  transform: scale(1.05) !important;
 }
+
 .btn-lore::before {
   content: "";
   position: absolute;
@@ -593,6 +606,7 @@ animation: pulseGlow 2.5s infinite ease-in-out;
   transform: skewX(-20deg);
   animation: shimmer 3s infinite;
 }
+
 @keyframes shimmer {
   0% { left: -75%; }
   50% { left: 125%; }
