@@ -113,45 +113,6 @@ nav a:hover {
   margin-bottom: 15px;
   animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
-
-/* === CTA BUTTON BASE === */
-.cta-button {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 12px 24px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  background-color: #9df2ff;
-  color: #000;
-  box-shadow: 0 0 10px #9df2ff;
-  transition: all 0.3s ease-in-out;
-  animation: pulseGlow 2.5s infinite ease-in-out;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button:hover {
-  background-color: #fdf897;
-  color: #000;
-  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897;
-  transform: scale(1.05);
-}
-
-.cta-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-  transform: skewX(-20deg);
-  animation: shimmer 3s infinite;
-}
 /* === QUICK ACCESS PANELS === */
 #quick-panels {
   display: grid;
@@ -216,74 +177,14 @@ nav a:hover {
   gap: 12px;
 }
 
-/* === LEGACY BUTTONS === */
-.market-shop {
-  background-color: #c1f3ff;
-  color: #000;
-  box-shadow: 0 0 10px #9df2ff;
-}
-.market-shop:hover {
-  background-color: #9df2ff;
-  box-shadow: 0 0 15px #9df2ff;
-}
-
-.market-create {
-  background-color: #fff3b0;
-  color: #000;
-  box-shadow: 0 0 10px #fdf897;
-}
-.market-create:hover {
-  background-color: #fdf897;
-  box-shadow: 0 0 15px #fdf897;
-}
-
-.market-main {
-  background-color: #9df2ff;
-  color: #000;
-}
-.market-main:hover {
-  background-color: #c1f3ff;
-}
-
-.market-bargain {
-  background-color: #fdf897;
-  color: #000;
-}
-.market-bargain:hover {
-  background-color: #fff3b0;
-}
-
-.market-etsy {
-  background-color: #ffb6c1;
-  color: #000;
-  box-shadow: 0 0 10px #ffb6c1;
-}
-.market-etsy:hover {
-  background-color: #ffe1e9;
-  box-shadow: 0 0 15px #ffb6c1;
-}
-
-.emporium-button {
-  background-color: #9df2ff;
-  color: #000;
-}
-.emporium-button:hover {
-  background-color: #c1f3ff;
-}
-
-.halloween-button {
-  background-color: #ff6347;
-  color: #fff;
-  box-shadow: 0 0 10px #ff4500;
-}
-.halloween-button:hover {
-  background-color: #ff4500;
-  box-shadow: 0 0 15px #ff6347;
-}
-
-/* === SEMANTIC STRAND BUTTONS === */
-.btn-strand {
-  display: inline-block;
+/* === STRAND BUTTONS — UNIFIED STYLE === */
+.market-shop,
+.market-create,
+.halloween-button,
+.market-etsy,
+.emporium-button,
+.cta-button {
+  display: block;
   width: 100%;
   max-width: 240px;
   min-width: 240px;
@@ -298,81 +199,73 @@ nav a:hover {
   overflow: hidden;
 }
 
-/* 🛍️ SHOP STRAND */
-.btn-shop {
+/* === SHOP STRAND === */
+.market-shop {
   background-color: #c1f3ff;
   color: #000;
   box-shadow: 0 0 10px #9df2ff;
 }
-.btn-shop:hover {
+.market-shop:hover {
   background-color: #9df2ff;
-  box-shadow: 0 0 20px #9df2ff;
+  box-shadow: 0 0 20px #9df2ff, 0 0 40px #9df2ff;
   transform: scale(1.05);
 }
 
-/* 🎨 CREATE STRAND */
-.btn-create {
+/* === CREATE STRAND === */
+.market-create {
   background-color: #fff3b0;
   color: #000;
   box-shadow: 0 0 10px #fdf897;
 }
-.btn-create:hover {
+.market-create:hover {
   background-color: #fdf897;
-  box-shadow: 0 0 20px #fdf897;
+  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897;
   transform: scale(1.05);
 }
 
-/* 🎭 SEASON STRAND */
-.btn-season {
+/* === SEASON STRAND === */
+.halloween-button {
   background-color: #ff6347;
   color: #fff;
   box-shadow: 0 0 10px #ff4500;
 }
-.btn-season:hover {
+.halloween-button:hover {
   background-color: #ff4500;
-  box-shadow: 0 0 20px #ff6347;
+  box-shadow: 0 0 20px #ff6347, 0 0 40px #ff6347;
   transform: scale(1.05);
 }
 
-/* 🌐 EXTERNAL MARKET STRAND */
-.btn-external {
+/* === EXTERNAL STRAND === */
+.market-etsy {
   background-color: #ffb6c1;
   color: #000;
   box-shadow: 0 0 10px #ffb6c1;
 }
-.btn-external:hover {
+.market-etsy:hover {
   background-color: #ffe1e9;
-  box-shadow: 0 0 20px #ffb6c1;
+  box-shadow: 0 0 20px #ffb6c1, 0 0 40px #ffb6c1;
   transform: scale(1.05);
 }
-/* === 📜 LORE STRAND — full override for CTA-style buttons === */
-.btn-lore {
-  background-color: #9df2ff !important;
-  color: #000 !important;
-  box-shadow: 0 0 10px #9df2ff !important;
-  animation: none !important;
-  border-radius: 8px !important;
-  font-weight: bold !important;
-  text-decoration: none !important;
-  display: block !important;
-  width: 100% !important;
-  max-width: 240px !important;
-  min-width: 240px !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-  padding: 12px 24px !important;
-  transition: all 0.3s ease-in-out !important;
-  position: relative !important;
-  overflow: hidden !important;
+
+/* === EMPORIUM BUTTON === */
+.emporium-button {
+  background-color: #9df2ff;
+  color: #000;
+  box-shadow: 0 0 10px #9df2ff;
+}
+.emporium-button:hover {
+  background-color: #c1f3ff;
+  box-shadow: 0 0 20px #9df2ff, 0 0 40px #9df2ff;
+  transform: scale(1.05);
 }
 
-.btn-lore:hover {
-  background-color: #fdf897 !important;
-  box-shadow: 0 0 20px #fdf897, 0 0 40px #fdf897 !important;
-  transform: scale(1.05) !important;
-}
-
-.btn-lore::before {
+/* === SHIMMER EFFECT FOR ALL STRAND BUTTONS === */
+.market-shop::before,
+.market-create::before,
+.halloween-button::before,
+.market-etsy::before,
+.emporium-button::before,
+.cta-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -383,7 +276,6 @@ nav a:hover {
   transform: skewX(-20deg);
   animation: shimmer 3s infinite;
 }
-
 /* === CAROUSEL & LORE SECTIONS === */
 #carousel,
 #lore-section {
