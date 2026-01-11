@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autumn Lore — Alchemise Innovation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #0a1a2a, #0f2e4d, #1a3f66);
+    color: #e6f7ff;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    background: #08121d;
+    color: #a8d8ff;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #66ccff;
+  }
+
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    color: #cceaff;
+    font-family: 'Uncial Antiqua', cursive;
+    margin-top: 2rem;
+  }
+
+  .lore-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid #66ccff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .lore-box:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #99ddff;
+  }
+
+  /* ❄️ Snowflake animation */
+  .snowflake {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Snow_flake.svg/1024px-Snow_flake.svg.png');
+    background-size: cover;
+    opacity: 0.8;
+    animation: snowfall 12s linear infinite;
+  }
+
+  @keyframes snowfall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0.2; }
+  }
+
+  .button {
+    background: #66ccff;
+    color: #00111f;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+
+  .button:hover {
+    background: #99ddff;
+  }
+
+  .hidden {
+    display: none;
+  }
+    /* Aurora background layer */
+.aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 120%, rgba(0,255,255,0.15), transparent 70%),
+              radial-gradient(circle at 20% 0%, rgba(0,150,255,0.2), transparent 60%),
+              radial-gradient(circle at 80% 0%, rgba(180,80,255,0.2), transparent 60%);
+  animation: auroraShift 18s ease-in-out infinite alternate;
+  filter: blur(40px);
+}
+
+@keyframes auroraShift {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-40px) translateX(20px);
+    opacity: 1;
+  }
+}
+.lore-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.lore-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(135deg,
+    rgba(200, 240, 255, 0.8),
+    rgba(150, 200, 255, 0.4),
+    rgba(255, 255, 255, 0.9),
+    rgba(120, 180, 255, 0.5)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: frostShimmer 6s linear infinite;
+}
+
+@keyframes frostShimmer {
+  0% { opacity: 0.4; filter: blur(1px); }
+  50% { opacity: 1; filter: blur(2px); }
+  100% { opacity: 0.4; filter: blur(1px); }
+}
+.lore-box {
+  backdrop-filter: blur(6px) brightness(1.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+.frost-mote {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: frostDrift 12s linear infinite;
+}
+
+@keyframes frostDrift {
+  0% { transform: translateY(-20px) translateX(0px); opacity: 0.4; }
+  100% { transform: translateY(100vh) translateX(40px); opacity: 0; }
+}
+
+</style>
+
+</head>
+<body>
+ <div class="aurora"></div>
+
+<header>Winter Lore: Stillness, Frost, and Revelation</header>
+<section>
+  <h2>❄️ The Season of Stillness</h2>
+  <div class="lore-box">
+    Winter is the season of quiet revelation. Snow blankets the land, muting the world so hidden truths can surface. In Alchemise lore, this is the time of “The Great Still”—when clarity emerges through silence and frost-bound sigils awaken.
+  </div>
+
+  <h2>🌬️ Solstice: The Longest Night</h2>
+  <div class="lore-box">
+    On the Winter Solstice, darkness reaches its peak. In our campaigns, this marks the “Night of Mirrors”—a ritual drop where participants unlock reflective overlays, frost glyphs, and memory-echo effects. Inspired by ancient solstice rites and the quiet power of sacred nights.
+  </div>
+
+  <h2>🕯️ Midwinter: The Hearth Vigil</h2>
+  <div class="lore-box">
+    Midwinter honors warmth in the cold. In Alchemise, it becomes the “Hearth Vigil”—a communal ritual where users activate ember sigils, share story fragments, and unlock cozy, glow‑based overlays. Fireside rituals become lore nodes. Scarves and tees become conduits.
+  </div>
+
+  <h2>🐺 The Perennial Drift: Storm of the North</h2>
+  <div class="lore-box">
+    The great winter storm that circles the realm is known as the Perennial Drift. In our universe, this event triggers the “Frostbound Cycle”—a participatory challenge where users navigate swirling snow glyphs, drifting sigils, and shifting visibility layers. Inspired by blizzards, whiteouts, and mythic northern trials.
+  </div>
+
+  <h2>🧝 LOTR: Snow, Shadow, and Fellowship</h2>
+  <div class="lore-box">
+    Winter in Middle-earth is a test of endurance and truth—from Caradhras’ wrath to the quiet resolve of Lothlórien’s winter woods. Our lore engine channels this—modular frost overlays echo the Fellowship’s trials, each drop a step deeper into revelation.
+  </div>
+
+  <button class="button" onclick="revealLore()">Reveal Hidden Lore</button>
+  <div id="hiddenLore" class="lore-box hidden">
+    ❄️ In the Alchemise engine, winter triggers “Morph Mode: Frost.” Assets crystallize, sigils refract like ice shards, and overlays drift like snow. Each frame is a breath of cold clarity.
+  </div>
+</section>
+
+
+
+  <script>
+// Falling snowflakes
+for (let i = 0; i < 30; i++) {
+  let flake = document.createElement('div');
+  flake.className = 'snowflake';
+  flake.style.left = Math.random() * window.innerWidth + 'px';
+  flake.style.animationDuration = (6 + Math.random() * 6) + 's';
+  flake.style.opacity = 0.5 + Math.random() * 0.5;
+  document.body.appendChild(flake);
+}
+
+for (let i = 0; i < 40; i++) {
+  let mote = document.createElement('div');
+  mote.className = 'frost-mote';
+  mote.style.left = Math.random() * window.innerWidth + 'px';
+  mote.style.animationDuration = (8 + Math.random() * 10) + 's';
+  document.body.appendChild(mote);
+}
+
+    // Reveal lore
+    function revealLore() {
+      document.getElementById('hiddenLore').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
