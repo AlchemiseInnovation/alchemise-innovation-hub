@@ -373,8 +373,99 @@ nav a:hover {
   100% { left: 125%; }
 }
 
+/* === WINTER PORTAL RING === */
+.portal-ring {
+  position: absolute;
+
+  /* Position stays percentage-based */
+  top: 24%;
+  left: 48%;
+
+  /* Responsive radius */
+width: 24vw; 
+    height: 24vw;
+
+  border-radius: 50%;
+
+  border: 4px dashed transparent;
+  background: conic-gradient(
+    from 0deg,
+    #eaf6ff,
+    #a8d8ff,
+    #7fe7ff,
+    #dde7f0,
+    #eaf6ff
+  );
 
 
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 6px), black 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 6px), black 0);
+
+animation: spinPortal 12s linear infinite, frostPulse 6s ease-in-out infinite, auroraShift 20s linear infinite;
+
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.portal-ring::after {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.4;
+  animation: snowDrift 8s linear infinite;
+  pointer-events: none;
+}
+
+
+  /* Winter gradient ring */
+  border: 4px dashed transparent;
+  background: conic-gradient(
+    from 0deg,
+    #eaf6ff,
+    #a8d8ff,
+    #7fe7ff,
+    #dde7f0,
+    #eaf6ff
+  );
+  -webkit-mask: 
+    radial-gradient(farthest-side, transparent calc(100% - 6px), black 0);
+  mask: 
+    radial-gradient(farthest-side, transparent calc(100% - 6px), black 0);
+
+  animation: spinPortal 12s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Rotation */
+@keyframes spinPortal {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes frostPulse {
+  0%   { filter: drop-shadow(0 0 4px #a8d8ff); }
+  50%  { filter: drop-shadow(0 0 14px #7fe7ff); }
+  100% { filter: drop-shadow(0 0 4px #a8d8ff); }
+}
+@keyframes auroraShift {
+  0% {
+    background: conic-gradient(#eaf6ff, #a8d8ff, #7fe7ff, #dde7f0, #eaf6ff);
+  }
+  50% {
+    background: conic-gradient(#dff4ff, #9cd0ff, #6fdcff, #cfe3f0, #dff4ff);
+  }
+  100% {
+    background: conic-gradient(#eaf6ff, #a8d8ff, #7fe7ff, #dde7f0, #eaf6ff);
+  }
+}
+
+@keyframes snowDrift {
+  from { transform: translateY(0); }
+  to   { transform: translateY(20px); }
+}
+backdrop-filter: blur(2px);
 
 
 /* === CAROUSEL & LORE SECTIONS === */
