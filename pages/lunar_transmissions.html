@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collection Portal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a0a;
+      font-family: 'Courier New', Courier, monospace;
+      color: #ddd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #222;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+
+    .embed-container {
+      margin: 3rem auto;
+      width: 90%;
+      max-width: 1000px;
+      background-color: #111;
+      padding: 1rem;
+      border: 2px solid #333;
+      border-radius: 12px;
+      box-shadow: 0 0 25px #0ff4;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧬 Collection Interface</h1>
+    <p>Access themed merchandise & artifacts from the archive</p>
+      <p>The latest designs intercepted and available now</p>
+  </header>
+
+<div class="ai-banner">
+  <img src="banner_blurred.png" class="banner-glow" alt="Glow Layer">
+  <img src="banner.png" class="banner-main" alt="Main Banner">
+  <div class="signal"></div>
+</div>
+
+<style>
+  .ai-banner {
+    position: relative;
+    width: 50%;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+  }
+
+  .banner-main,
+  .banner-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner-glow {
+    filter: blur(12px) brightness(1.8) saturate(1.4);
+    opacity: 0.6;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+  }
+
+  .banner-main {
+    z-index: 2;
+  }
+
+  .signal {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    width: 6px;
+    height: 300%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1), #ffcc00, rgba(255,255,255,0.1));
+    transform: translateX(-50%);
+    animation: beam 6s ease-in-out infinite;
+    z-index: 3;
+    filter: blur(4px);
+  }
+
+  @keyframes beam {
+    0% { top: -100%; }
+    40% { top: 50%; }
+    60% { top: 50%; }
+    100% { top: 200%; }
+  }
+
+  /* Glow trigger synced with beam */
+  .ai-banner.glow .banner-glow {
+    opacity: 1;
+  }
+</style>
+
+<script>
+window.addEventListener("load", function () {
+  const banner = document.querySelector('.ai-banner');
+
+  if (!banner) return;
+
+  setInterval(() => {
+    banner.classList.add('glow');
+    setTimeout(() => {
+      banner.classList.remove('glow');
+    }, 1200);
+  }, 6000);
+});
+</script>
+
+
+
+
+
+
+
+    
+
+    
+  <div class="embed-container">
+    <!-- Replace below with your shop page URL -->
+    <iframe src="https://alchemise-innovation.square.site/shop/2026/5ZANCJELSDEMR4GEYIYMVMMP?"></iframe>
+  </div>
+<footer class="ai-footer">
+   
+    <div class="ai-logo-wrapper">
+  <img src="logo.png" class="ai-logo" alt="Alchemise Innovation Logo">
+
+  <!-- Orbiting glyphs -->
+  <div class="orbit">
+    <div class="glyph g1"></div>
+    <div class="glyph g2"></div>
+    <div class="glyph g3"></div>
+    <div class="glyph g4"></div>
+  </div>
+
+  <!-- Central pulse glyph -->
+  <div class="center-glyph"></div>
+</div>
+
+  <div class="footer-links">
+    <a href="https://alchemise-innovation-hub.netlify.app/shop" class="footer-btn">Design Emporium</a>
+    <a href="https://alchemise-innovation-hub.netlify.app/" class="footer-btn">Alchemise Hub</a>
+    <a href="https://atlas-portal-ai.netlify.app/" class="footer-btn">Atlas Portal</a>
+  </div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    &copy; 2025 Alchemise Innovation • Lore Layer Active
+  </footer>
+
+
+
+
+
+<style>
+  .ai-logo-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .ai-logo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ORBIT RING */
+  .orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    animation: spin 12s linear infinite;
+    z-index: 1;
+  }
+
+  /* MINI GLYPHS */
+  .glyph {
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, #ffcc66, #ff6600);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #ff9900;
+  }
+
+  .g1 { top: -5px; left: 50%; transform: translateX(-50%); }
+  .g2 { bottom: -5px; left: 50%; transform: translateX(-50%); }
+  .g3 { left: -5px; top: 50%; transform: translateY(-50%); }
+  .g4 { right: -5px; top: 50%; transform: translateY(-50%); }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* CENTER GLYPH (NEW DESIGNS PULSE) */
+  .center-glyph {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #ffffff, #ffcc00, #ff6600);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 20px #ff9900;
+    animation: pulse 6s ease-in-out infinite;
+    z-index: 3;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+    40% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    60% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+  }
+</style>
+
+
+
+
+
+
+
+    
+    
+
+
+    
+<style>
+  .ai-footer {
+    padding: 2.5rem 0;
+    text-align: center;
+    background: #000;
+    color: #fff;
+  }
+
+  .footer-logo img {
+    width: 140px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer-logo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .footer-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-btn {
+    padding: 0.7rem 1.4rem;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: #fff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .footer-btn:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 12px rgba(255,255,255,0.6);
+    transform: translateY(-2px);
+  }
+</style>
+
+</body>
+</html>
