@@ -1,46 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Matches Elfie – Matchday Magic Selfie Engine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Your Own | Alchemise Innovation</title>
-  <link rel="stylesheet" href="styles/style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<!-- LORE LOADING -->
+<div id="lore-loading" aria-hidden="true">
+  <div class="lore-box">
+    <p>✨ Preparing the New Dawn Sigils…</p>
+    <p>🔮 Charging the sElfie Engine…</p>
+    <p>❄️ Summoning Winter Spirits…</p>
+  </div>
+</div>
+
+<!-- SNOW -->
+<div class="emoji-snow" aria-hidden="true">
+  <span>❄️</span><span>❄️</span><span>❄️</span><span>❄️</span><span>❄️</span>
+</div>
+
+<!-- APP (NARROW UI ZONE) -->
+<main class="app">
+
   <header>
-    <h1><span class="brand">Alchemise</span> <span class="hub-label">Innovation</span></h1>
-    <nav>
-      <a href="index.html">Return to Hub</a>
-    </nav>
+    <h1>🧬 Alchemise Innovation</h1>
+    <p>Bring your own magic</p>
   </header>
+
+  <!-- BANNER -->
+  <div class="ai-banner">
+    <img src="banner_blurred.png" class="banner-glow" alt="Glow">
+    <img src="banner.png" class="banner-main" alt="Banner">
+    <div class="signal"></div>
+  </div>
 
   <section id="create-welcome">
     <h2>⚗️ Create Your Own</h2>
-    <p>Choose your path: personalize existing gear or design your own artifact from scratch.</p>
+    <p>Choose your path: personalise or design from scratch.</p>
   </section>
-
+<br />
   <section id="creative-paths">
     <div class="creative-option">
       <h3>🧵 Personalise</h3>
-      <p>Edit text fields on existing designs. Add names, quotes, or faction tags via our Printify portal.</p>
-      <a href="https://alchemiseinnovation.printify.me/" class="cta-button create-glow" target="_blank">Start Personalising</a>
-    </div>
-
-    <div class="creative-option">
-      <h3>🎨 Design Your Own</h3>
-      <p>Upload your art or remix visuals using our embedded builder.</p>
-      <iframe src="https://alchemiseinnovation.myspreadshop.co.uk/" width="100%" height="600px" style="border:none;"></iframe>
+      <p>Edit existing designs via Printify.</p>
+      <a href="https://alchemiseinnovation.printify.me/" target="_blank" class="cta-button">Start Personalising</a>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Alchemise Innovation. Explore responsibly across the multiverse.</p>
-    <div class="printify-credit">
-      <img src="assets/images/printify-sigil.png" alt="Printify Glyph" class="printify-glyph" />
-      <span>Artifacts co-forged via <a href="https://alchemiseinnovation.printify.me/" target="_blank">Printify</a></span>
-    </div>
-  </footer>
+</main>
 
-  <script src="script/create.js"></script>
+<!-- FULL‑WIDTH SPREADSHOP -->
+<section class="spreadshop-section">
+  <h2>🎨 Design Your Own</h2>
+  <p>Upload your art or remix visuals in our Spreadshop builder.</p>
+
+  <iframe
+    src="https://alchemiseinnovation.myspreadshop.co.uk/"
+    class="spreadshop-frame"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- FOOTER -->
+<footer class="ai-footer">
+
+  <div class="ai-logo-wrapper">
+    <img src="logo.png" class="ai-logo" alt="Alchemise Innovation Logo">
+    <div class="orbit">
+      <div class="glyph g1"></div>
+      <div class="glyph g2"></div>
+      <div class="glyph g3"></div>
+      <div class="glyph g4"></div>
+    </div>
+    <div class="center-glyph"></div>
+  </div>
+
+  <div class="footer-links">
+    <a href="https://alchemise-innovation-hub.netlify.app/shop" class="footer-btn">Design Emporium</a>
+    <a href="https://alchemise-innovation-hub.netlify.app/" class="footer-btn">Alchemise Hub</a>
+    <a href="https://atlas-portal-ai.netlify.app/" class="footer-btn">Atlas Portal</a>
+  </div>
+
+  <p>&copy; 2025 Alchemise Innovation • Lore Layer Active</p>
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("lore-loading").classList.add("hidden");
+});
+</script>
+
 </body>
 </html>
