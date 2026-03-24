@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Spring Lore — Alchemise Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #f7ffe8, #e3f7d3, #d0efc1);
+    color: #2b3a1a;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    background: #e8f8d8;
+    color: #4a6b2d;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #9edc7c;
+    position: relative;
+    z-index: 20;
+  }
+
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  h2 {
+    color: #5c8a3a;
+    font-family: 'Uncial Antiqua', cursive;
+    margin-top: 2rem;
+  }
+
+  .lore-box {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #a6e48a;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .lore-box:hover {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: #c1f5a8;
+  }
+
+  /* Animation layers */
+  #layerBack, #layerMid, #layerFront {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  #layerBack { z-index: 2; }
+  #layerMid { z-index: 5; }
+  #layerFront { z-index: 15; }
+
+  /* Emoji particles */
+  .particle {
+    position: absolute;
+    font-size: 24px;
+    animation: fall linear infinite;
+    opacity: 0.9;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-120px) translateX(0px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) translateX(40px) rotate(360deg); opacity: 0.2; }
+  }
+
+  /* Petal burst */
+  .petal {
+    position: absolute;
+    font-size: 20px;
+    animation: petalFall 1.8s ease-out forwards;
+  }
+
+  @keyframes petalFall {
+    0% { transform: translateY(0px) scale(1); opacity: 1; }
+    100% { transform: translateY(80px) scale(0.4) rotate(180deg); opacity: 0; }
+  }
+
+  .button {
+    background: #9edc7c;
+    color: #1f2d10;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .hidden { display: none; }
+</style>
+</head>
+
+<body>
+
+<div id="layerBack"></div>
+<div id="layerMid"></div>
+<div id="layerFront"></div>
+
+<header>Spring Lore: Renewal, Bloom, and Awakening</header>
+
+<section>
+  <h2>🌸 The Season of Renewal</h2>
+  <div class="lore-box">
+    Spring is the season of awakening. Buds break open, colour returns, and the world exhales.
+    In Alchemise lore, this is the “Bloomrise”—the moment dormant sigils stir and new pathways unfurl.
+  </div>
+
+  <h2>🌱 Equinox: Balance in Bloom</h2>
+  <div class="lore-box">
+    The Spring Equinox marks perfect balance. In our campaigns, this becomes the “Day of Petals”—a ritual drop where participants unlock blossom overlays, vine glyphs, and soft‑glow transitions.
+  </div>
+
+  <h2>🔥 Ember to Blossom: The Hearth Rekindled</h2>
+  <div class="lore-box">
+    As warmth returns, the Hearth Vigil transforms. In Spring, it becomes the “Kindle Bloom”—a communal ritual where users activate sprout sigils, share renewal stories, and unlock warm‑pastel overlays.
+  </div>
+
+  <h2>🌦️ The Verdant Drift: Rains of Renewal</h2>
+  <div class="lore-box">
+    The great seasonal rain is known as the Verdant Drift. In our universe, this triggers the “Greenbound Cycle”—a participatory challenge of shifting petals, drifting pollen, and soft‑mist layers.
+  </div>
+
+  <h2>🧝 LOTR: Spring in Middle‑earth</h2>
+  <div class="lore-box">
+    Spring in Middle‑earth is a season of hope—from the first green in Ithilien to the renewal of the White Tree.
+    Our lore engine channels this—modular bloom overlays echo the Fellowship’s turning tides.
+  </div>
+
+  <button class="button" onclick="revealLore()">Reveal Hidden Lore</button>
+  <div id="hiddenLore" class="lore-box hidden">
+    🌸 In the Alchemise engine, spring triggers “Morph Mode: Bloom.”
+    Assets unfurl, sigils pulse like petals, and overlays drift like soft pollen.
+    Each frame is a breath of renewal.
+  </div>
+</section>
+
+<script>
+const front = document.getElementById('layerFront');
+const mid = document.getElementById('layerMid');
+const back = document.getElementById('layerBack');
+
+/* Emoji sets */
+const butterflies = ["🦋","🦋","🦋"];
+const bees = ["🐝","🐝"];
+const pollen = ["•","•","•","•"];
+
+/* Spawn particles */
+function spawnEmoji(layer, emoji, count, sizeMin=20, sizeMax=32) {
+  for (let i = 0; i < count; i++) {
+    let p = document.createElement('div');
+    p.className = 'particle';
+    p.textContent = emoji[Math.floor(Math.random() * emoji.length)];
+    p.style.left = Math.random() * window.innerWidth + 'px';
+    p.style.fontSize = (sizeMin + Math.random() * (sizeMax - sizeMin)) + "px";
+    p.style.animationDuration = (8 + Math.random() * 10) + "s";
+    layer.appendChild(p);
+  }
+}
+
+spawnEmoji(front, butterflies, 20);
+spawnEmoji(mid, bees, 10);
+spawnEmoji(back, pollen, 40, 10, 14);
+
+/* Petal burst on click */
+document.addEventListener('click', (e) => {
+  for (let i = 0; i < 6; i++) {
+    let petal = document.createElement('div');
+    petal.className = 'petal';
+    petal.textContent = "🌸";
+    petal.style.left = (e.clientX + (Math.random() * 40 - 20)) + 'px';
+    petal.style.top = (e.clientY + (Math.random() * 40 - 20)) + 'px';
+    front.appendChild(petal);
+    setTimeout(() => petal.remove(), 1800);
+  }
+});
+
+/* Reveal hidden lore */
+function revealLore() {
+  document.getElementById('hiddenLore').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
