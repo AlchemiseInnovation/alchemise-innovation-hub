@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Summer Lore — Alchemise Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #fff4d1, #ffe7a3, #ffd978);
+    color: #4a2e00;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    background: #ffe9b0;
+    color: #a45a00;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ffcc66;
+    position: relative;
+    z-index: 20;
+  }
+
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  h2 {
+    color: #c46a00;
+    font-family: 'Uncial Antiqua', cursive;
+    margin-top: 2rem;
+  }
+
+  .lore-box {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid #ffd27a;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .lore-box:hover {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: #ffe8b3;
+  }
+
+  /* Animation layers */
+  #layerBack, #layerMid, #layerFront {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  #layerBack { z-index: 2; }
+  #layerMid { z-index: 5; }
+  #layerFront { z-index: 15; }
+
+  /* Emoji particles */
+  .particle {
+    position: absolute;
+    font-size: 24px;
+    animation: fall linear infinite;
+    opacity: 0.9;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-120px) translateX(0px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) translateX(40px) rotate(360deg); opacity: 0.2; }
+  }
+
+  /* Sunburst sparks */
+  .spark {
+    position: absolute;
+    font-size: 20px;
+    animation: sparkFall 1.8s ease-out forwards;
+  }
+
+  @keyframes sparkFall {
+    0% { transform: translateY(0px) scale(1); opacity: 1; }
+    100% { transform: translateY(80px) scale(0.4) rotate(180deg); opacity: 0; }
+  }
+
+  .button {
+    background: #ffcc66;
+    color: #4a2e00;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .hidden { display: none; }
+</style>
+</head>
+
+<body>
+
+<div id="layerBack"></div>
+<div id="layerMid"></div>
+<div id="layerFront"></div>
+
+<header>Summer Lore: Radiance, Heat, and Ascendance</header>
+
+<section>
+  <h2>🔥 The Season of Radiance</h2>
+  <div class="lore-box">
+    Summer is the season of full ascendance. Heat shimmers, colours intensify, and the world thrums with life.
+    In Alchemise lore, this is the “Sunspire”—the moment sigils blaze and pathways ignite.
+  </div>
+
+  <h2>☀️ Solstice: Crown of Light</h2>
+  <div class="lore-box">
+    The Summer Solstice marks the apex of the sun. In our campaigns, this becomes the “Day of Embers”—a ritual drop where participants unlock flare overlays, heat‑glyphs, and golden‑glow transitions.
+  </div>
+
+  <h2>🔥 Emberwake: The Hearth Ascends</h2>
+  <div class="lore-box">
+    As heat peaks, the Hearth Vigil transforms. In Summer, it becomes the “Kindleflare”—a communal ritual where users activate solar sigils, share heat‑lore, and unlock molten‑gold overlays.
+  </div>
+
+  <h2>🌤️ The Amber Drift: Winds of Heat</h2>
+  <div class="lore-box">
+    The great seasonal shimmer is known as the Amber Drift. In our universe, this triggers the “Sunbound Cycle”—a participatory challenge of drifting sparks, heat‑haze waves, and bright‑mist layers.
+  </div>
+
+  <h2>🧝 LOTR: Summer in Middle‑earth</h2>
+  <div class="lore-box">
+    Summer in Middle‑earth is a season of golden fields, long journeys, and clear skies.
+    Our lore engine channels this—modular heat overlays echo the Fellowship’s endurance and bright turning tides.
+  </div>
+
+  <button class="button" onclick="revealLore()">Reveal Hidden Lore</button>
+  <div id="hiddenLore" class="lore-box hidden">
+    ☀️ In the Alchemise engine, summer triggers “Morph Mode: Ember.”
+    Assets flare, sigils pulse like sunbursts, and overlays drift like shimmering heat.
+    Each frame is a breath of radiance.
+  </div>
+</section>
+
+<script>
+const front = document.getElementById('layerFront');
+const mid = document.getElementById('layerMid');
+const back = document.getElementById('layerBack');
+
+/* Emoji sets */
+const suns = ["☀️","☀️","☀️"];
+const fireflies = ["✨","✨"];
+const sparks = ["•","•","•","•"];
+
+/* Spawn particles */
+function spawnEmoji(layer, emoji, count, sizeMin=20, sizeMax=32) {
+  for (let i = 0; i < count; i++) {
+    let p = document.createElement('div');
+    p.className = 'particle';
+    p.textContent = emoji[Math.floor(Math.random() * emoji.length)];
+    p.style.left = Math.random() * window.innerWidth + 'px';
+    p.style.fontSize = (sizeMin + Math.random() * (sizeMax - sizeMin)) + "px";
+    p.style.animationDuration = (8 + Math.random() * 10) + "s";
+    layer.appendChild(p);
+  }
+}
+
+spawnEmoji(front, suns, 20);
+spawnEmoji(mid, fireflies, 10);
+spawnEmoji(back, sparks, 40, 10, 14);
+
+/* Spark burst on click */
+document.addEventListener('click', (e) => {
+  for (let i = 0; i < 6; i++) {
+    let spark = document.createElement('div');
+    spark.className = 'spark';
+    spark.textContent = "✨";
+    spark.style.left = (e.clientX + (Math.random() * 40 - 20)) + 'px';
+    spark.style.top = (e.clientY + (Math.random() * 40 - 20)) + 'px';
+    front.appendChild(spark);
+    setTimeout(() => spark.remove(), 1800);
+  }
+});
+
+/* Reveal hidden lore */
+function revealLore() {
+  document.getElementById('hiddenLore').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
