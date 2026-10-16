@@ -726,3 +726,23 @@ footer {
   color: #ccc;
   font-size: 1rem;
 }
+
+
+
+
+#seasonal details summary {
+  cursor: pointer;
+  color: #d97706; /* Adjust to match your autumn accent color */
+  font-weight: bold;
+  margin-top: 0.5rem;
+  list-style: none; /* Hides default triangle arrow in some browsers */
+}
+
+#seasonal details summary::-webkit-details-marker {
+  display: none; /* Hides default arrow in Safari/Chrome */
+}
+
+#seasonal details[open] summary::after {
+  content: " (Show Less)";
+  font-weight: normal;
+}
