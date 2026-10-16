@@ -1,5 +1,4 @@
 
-<script>
 (function () {
 
     const CONFIG = {
@@ -250,4 +249,3 @@
     }
 
 })();
-</script>
